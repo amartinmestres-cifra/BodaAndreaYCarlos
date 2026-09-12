@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#294b39">
-<meta name="description" content="Andrea y Carlos. Nueve preguntas, un poquito de ciencia y una historia de amor de la buena.">
+<meta name="description" content="Andrea y Carlos. Diez preguntas, un poquito de ciencia y una historia de amor de la buena.">
 <title>Andrea & Carlos · Amor del bueno</title>
 <style>
 :root{--paper:#f8f4e9;--green:#294b39;--muted:#6d7566;--line:#dedfce;--gold:#b48249;--white:#fffdf7}
@@ -15,6 +15,7 @@ main{max-width:1000px;margin:auto;padding:0 24px}.hero{text-align:center;padding
 .calc-card{text-align:center}.calc-card .eyebrow{color:var(--gold)}.calc-card h2{margin:18px 0 9px}.milk{width:49px;height:75px;border:2px solid var(--green);border-radius:6px 6px 14px 14px;margin:24px auto 20px;position:relative;background:#e5ebda;overflow:hidden}.milk:after{content:"";position:absolute;left:-20%;width:140%;height:120%;background:#fffdf7;bottom:var(--fill,0%);border-radius:40%;animation:wave 3s linear infinite;transition:bottom 1.5s}.milk:before{content:"L";position:absolute;z-index:1;left:0;right:0;top:28px;font-family:Georgia,serif;font-size:23px}.board{text-align:left;background:#244231;color:#f5f0dc;border-radius:4px;padding:24px;margin-top:22px;background-image:linear-gradient(#ffffff05 1px,transparent 1px),linear-gradient(90deg,#ffffff05 1px,transparent 1px);background-size:22px 22px}.board-label{font-size:9px;letter-spacing:2px;color:#c3cda9;text-transform:uppercase}.formula{font-family:Georgia,serif;font-size:clamp(21px,4.4vw,32px);line-height:1.65;margin:18px 0;min-height:90px;overflow-wrap:anywhere}.formula small{display:block;font-family:Arial,sans-serif;font-size:11px;color:#cbd5bc;line-height:1.6}.calc-log{font-family:monospace;font-size:10px;color:#ccdabf;line-height:1.8;min-height:55px;white-space:pre-line}.calc-progress{display:flex;justify-content:space-between;font-size:10px;margin-top:18px}.result{text-align:center}.seal{border:1px solid #b9c4a6;border-radius:50%;height:70px;width:70px;margin:0 auto 22px;display:grid;place-items:center;font-size:32px;background:#f0f2e5}.code{display:flex;justify-content:center;gap:12px;margin:26px 0}.code span{background:#eff1e4;border:1px solid #cdd4bd;border-radius:6px;font-family:Georgia,serif;font-size:64px;line-height:1;padding:17px 21px;box-shadow:inset 0 -4px 0 #e2e7d5}.result p{color:var(--muted);font-size:13px;line-height:1.7}.result details{text-align:left;border-top:1px solid var(--line);margin-top:25px;padding-top:18px;font-size:12px}.result summary{cursor:pointer}.answer-list{padding-left:20px;color:var(--muted);line-height:1.6}.answer-list li{padding:7px 0}.answer-list strong{color:var(--green)}.restart{margin-top:22px}.fade{animation:appear .4s ease both}
 @keyframes wave{to{transform:rotate(360deg)}}@keyframes appear{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}@media(max-width:600px){.topline{padding:17px 20px;font-size:8px;letter-spacing:1.3px}.topline .middle{display:none}main{padding:0 16px}.hero{padding-top:32px}.hero h1{letter-spacing:-2px;margin-top:16px}.hero p{font-size:12px;max-width:295px}.eyebrow{font-size:9px;letter-spacing:2px}.landscape{width:calc(100% + 24px);max-width:none;margin-left:-12px;min-height:115px}.card{padding:25px 23px}.card-top{font-size:9px;letter-spacing:1px}.footer{margin-top:25px;font-size:8px;letter-spacing:.6px}.footnote{font-size:12px}.formula{min-height:110px}.board{padding:20px 16px}.code span{font-size:54px;padding:16px 18px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
 .thinking-photo{margin:0 0 20px;padding:8px;background:var(--white);border:1px solid var(--line);border-radius:6px;box-shadow:0 10px 25px #294b3909}.thinking-photo img{display:block;width:100%;height:auto;border-radius:3px}.thinking-photo figcaption{text-align:center;font-family:Georgia,serif;font-style:italic;font-size:12px;color:var(--muted);padding:12px 4px 5px}
+.cheer-scores{display:flex;justify-content:space-between;gap:16px;margin:8px 0 12px}.cheer-team{display:flex;flex-direction:column;gap:6px;font-family:Georgia,serif;font-size:24px;color:#b53144}.cheer-team:last-child{text-align:right;color:#2467a1}.cheer-team output{font-size:42px;font-variant-numeric:tabular-nums}.cheer-slider{display:block;width:100%;height:48px;margin:0;appearance:none;-webkit-appearance:none;background:transparent;cursor:ew-resize;--split:50%}.cheer-slider::-webkit-slider-runnable-track{height:14px;border-radius:20px;background:linear-gradient(to right,#bf4655 0%,#bf4655 var(--split),#367db4 var(--split),#367db4 100%)}.cheer-slider::-moz-range-track{height:14px;border-radius:20px;background:linear-gradient(to right,#bf4655 0%,#bf4655 var(--split),#367db4 var(--split),#367db4 100%)}.cheer-slider::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:38px;height:38px;border-radius:50%;background:var(--white);border:3px solid var(--green);margin-top:-12px;box-shadow:0 3px 8px #294b3926}.cheer-slider::-moz-range-thumb{width:32px;height:32px;border-radius:50%;background:var(--white);border:3px solid var(--green);box-shadow:0 3px 8px #294b3926}.cheer-directions{display:flex;justify-content:space-between;color:var(--muted);font-size:10px}.cheer-message{text-align:center;background:#f0f2e5;border:1px dashed #c3ccae;border-radius:5px;padding:17px 12px;margin:20px 0 10px;font-family:Georgia,serif;font-size:18px;line-height:1.4;min-height:86px;display:grid;place-items:center}.cheer-reset{display:block;margin:0 auto;background:transparent;border:0;padding:10px;color:var(--muted);font-size:11px;text-decoration:underline;text-underline-offset:3px}
 </style>
 </head>
 <body>
@@ -52,18 +53,25 @@ main{max-width:1000px;margin:auto;padding:0 24px}.hero{text-align:center;padding
 </svg>
 </section>
 <div class="experience">
-<figure id="thinking-photo" class="thinking-photo"><img src="foto_pensando.png" width="1672" height="941" alt="Andrea y Carlos pensando juntos entre libros y fórmulas matemáticas" fetchpriority="high"><figcaption>Dos cabezas, un equipo y una incógnita por resolver.</figcaption></figure>
+<figure id="thinking-photo" class="thinking-photo"><img id="question-photo" src="doncos_vilafiz.png" width="1672" height="941" alt="Doncos y Vilafiz animando a la boda sobre un mapa ilustrado de Galicia" fetchpriority="high"><figcaption id="photo-caption">Dos pueblos, una boda y muuucho que celebrar.</figcaption></figure>
 <section id="quiz" class="card">
-<div class="card-top"><span class="chapter" id="chapter">01 / Anécdotas del rebaño</span><span id="counter">Pregunta 1 de 9</span></div>
-<div class="progress" role="progressbar" aria-label="Progreso del cuestionario" aria-valuemin="0" aria-valuemax="9" aria-valuenow="0" id="quiz-progress"><div id="bar" class="bar"></div></div>
+<div class="card-top"><span class="chapter" id="chapter">01 / Que se oiga el rebaño</span><span id="counter">Pregunta 1 de 10</span></div>
+<div class="progress" role="progressbar" aria-label="Progreso del cuestionario" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="quiz-progress"><div id="bar" class="bar"></div></div>
 <form id="question-form" novalidate>
 <div id="question-content" class="fade"><div class="question-icon" id="question-icon" aria-hidden="true">🌾</div>
 <h2 id="question" tabindex="-1"></h2><p class="hint" id="hint"></p>
+<div id="cheer">
+<div class="cheer-scores"><div class="cheer-team"><span>Doncos</span><output id="doncos-percent" for="cheer-slider">50 %</output></div><div class="cheer-team"><span>Vilafiz</span><output id="vilafiz-percent" for="cheer-slider">50 %</output></div></div>
+<input id="cheer-slider" class="cheer-slider" type="range" min="0" max="100" step="1" value="50" aria-labelledby="question" aria-describedby="hint" aria-valuetext="Doncos 50 %, Vilafiz 50 %">
+<div class="cheer-directions"><span>← Más Doncos</span><span>Más Vilafiz →</span></div>
+<p id="cheer-message" class="cheer-message" role="status">¡Empate técnico! Se acepta soborno en queso.</p>
+<button id="cheer-reset" class="cheer-reset" type="button">Paz entre pueblos: volver al 50 / 50</button>
+</div>
 <div id="number-wrap" class="number-wrap"><input id="answer" type="number" inputmode="numeric" min="0" max="1000000" step="1" placeholder="0" aria-labelledby="question" aria-describedby="hint error"><span>personas</span></div>
 <div id="choices" class="choices hidden" role="group" aria-labelledby="question"><button type="button" class="choice" data-value="Andrea" aria-pressed="false">Andrea</button><button type="button" class="choice" data-value="Carlos" aria-pressed="false">Carlos</button></div></div>
 <p id="error" class="error" role="alert"></p>
 <button id="next" class="primary" type="submit"><span id="next-label">Guardar y seguir</span><span aria-hidden="true">→</span></button>
-<div class="bottom-row"><button id="back" type="button" class="back">← Anterior</button><span>Sin ayuda. Ni siquiera de los primos.</span></div>
+<div class="bottom-row"><button id="back" type="button" class="back">← Anterior</button><span id="question-footer">Aquí nadie pierde. ¡Solo se pierde la voz!</span></div>
 </form>
 </section>
 <section id="calc" class="card calc-card hidden" aria-labelledby="calc-title">
@@ -86,6 +94,7 @@ main{max-width:1000px;margin:auto;padding:0 24px}.hero{text-align:center;padding
 <script>
 'use strict';
 const QUESTIONS=[
+{text:"Doncos o Vilafiz… ¿quién se viene arriba?",icon:"📣",type:"slider"},
 {text:"¿Cuántas personas de aquí han visto a alguno de los novios caerse de un banco?",icon:"🌾"},
 {text:"¿Cuántas personas han visto a la novia dormir en la calle?",icon:"🌙"},
 {text:"¿Cuántas personas han visto al novio con tetas en la cabeza?",icon:"🐄"},
@@ -101,28 +110,51 @@ const $=id=>document.getElementById(id);
 let index=0,selected=null,calculationTimer=null;
 const responses=[];
 function renderQuestion(focus=false){
- const item=QUESTIONS[index],choice=item.type==="choice";
+ const item=QUESTIONS[index],choice=item.type==="choice",slider=item.type==="slider";
  $("question").textContent=item.text;$("question-icon").textContent=item.icon;
  $("counter").textContent="Pregunta "+(index+1)+" de "+QUESTIONS.length;
- $("chapter").textContent=choice?"02 / Vuestra historia":"01 / Anécdotas del rebaño";
+ $("chapter").textContent=slider?"01 / Que se oiga el rebaño":choice?"03 / Vuestra historia":"02 / Anécdotas del rebaño";
  $("bar").style.width=(index/QUESTIONS.length*100)+"%";$("quiz-progress").setAttribute("aria-valuenow",index);
- $("hint").textContent=choice?"Decidid juntos quién se lleva este mérito.":"Haced vuestra mejor estimación. Cada anécdota cuenta.";
- $("number-wrap").classList.toggle("hidden",choice);$("answer").disabled=choice;
+ $("hint").textContent=slider?"¡Haced gritar a los dos pueblos! Moved el deslizador según os dé el oído… o el cariño. Podéis dejarlo donde queráis: aquí no hay ganadores, hay boda.":choice?"Decidid juntos quién se lleva este mérito.":"Haced vuestra mejor estimación. Cada anécdota cuenta.";
+ $("number-wrap").classList.toggle("hidden",choice||slider);$("answer").disabled=choice||slider;
+ $("cheer").classList.toggle("hidden",!slider);$("cheer-slider").disabled=!slider;
+ if(slider){$("cheer-slider").value=responses[index]??50;updateCheer();}
+ $("question-photo").src=slider?"doncos_vilafiz.png":"foto_pensando.png";
+ $("question-photo").alt=slider?"Doncos y Vilafiz animando a la boda sobre un mapa ilustrado de Galicia":"Andrea y Carlos pensando juntos entre libros y fórmulas matemáticas";
+ $("photo-caption").textContent=slider?"Dos pueblos, una boda y muuucho que celebrar.":"Dos cabezas, un equipo y una incógnita por resolver.";
+ $("question-footer").textContent=slider?"Aquí nadie pierde. ¡Solo se pierde la voz!":"Sin ayuda. Ni siquiera de los primos.";
  $("choices").classList.toggle("hidden",!choice);$("answer").value=choice?"":(responses[index]??"");
  selected=choice?(responses[index]??null):null;
  document.querySelectorAll(".choice").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.value===selected)));
  $("back").disabled=index===0;$("error").textContent="";
- $("next-label").textContent=index===QUESTIONS.length-1?"Calcular nuestra combinación":"Guardar y seguir";
+ $("next-label").textContent=slider?"¡Así suena nuestra boda! Seguimos":index===QUESTIONS.length-1?"Calcular nuestra combinación":"Guardar y seguir";
  $("question-content").classList.remove("fade");void $("question-content").offsetWidth;$("question-content").classList.add("fade");
  if(focus)$("question").focus({preventScroll:true});
 }
+function updateCheer(){
+ const vilafiz=Number($("cheer-slider").value),doncos=100-vilafiz;
+ $("doncos-percent").textContent=doncos+" %";$("vilafiz-percent").textContent=vilafiz+" %";
+ $("cheer-slider").style.setProperty("--split",vilafiz+"%");
+ $("cheer-slider").setAttribute("aria-valuetext","Doncos "+doncos+" %, Vilafiz "+vilafiz+" %");
+ let message;
+ if(vilafiz===50)message="¡Empate técnico! Se acepta soborno en queso.";
+ else if(vilafiz===0)message="¡Doncos, que os oyen las vacas! Vilafiz, dejad el pulpo un momento.";
+ else if(vilafiz===100)message="¡Vilafiz, que tiemble el establo! Doncos, soltad el queso y a gritar.";
+ else if(vilafiz<25)message="¡Doncos está en modo tractor! Vilafiz, ¿estáis reservando voz para la verbena?";
+ else if(vilafiz>75)message="¡Vilafiz ha traído megáfono! Doncos, un muu bien fuerte y lo arregláis.";
+ else if(vilafiz<50)message="¡Se escucha a Doncos! Vilafiz, que todavía queda aire en los pulmones.";
+ else message="¡Se escucha a Vilafiz! Doncos, que no se diga: ¡a darlo todo!";
+ $("cheer-message").textContent=message;
+}
+$("cheer-slider").addEventListener("input",updateCheer);
+$("cheer-reset").addEventListener("click",()=>{$("cheer-slider").value=50;updateCheer();});
 document.querySelectorAll(".choice").forEach(button=>button.addEventListener("click",()=>{
  selected=button.dataset.value;$("error").textContent="";
  document.querySelectorAll(".choice").forEach(option=>option.setAttribute("aria-pressed",String(option===button)));
 }));
 $("question-form").addEventListener("submit",event=>{
- event.preventDefault();const choice=QUESTIONS[index].type==="choice";const raw=$("answer").value;const value=choice?selected:Number(raw);
- if(choice?!selected:(raw.trim()===""||!Number.isSafeInteger(value)||value<0||value>1000000)){
+ event.preventDefault();const choice=QUESTIONS[index].type==="choice",slider=QUESTIONS[index].type==="slider";const raw=slider?$("cheer-slider").value:$("answer").value;const value=choice?selected:Number(raw);
+ if(choice?!selected:(raw.trim()===""||!Number.isSafeInteger(value)||value<0||value>(slider?100:1000000))){
   $("error").textContent=choice?"Elegid a Andrea o a Carlos para continuar.":"Introducid un número entero entre 0 y 1.000.000.";return;
  }
  responses[index]=value;
@@ -130,14 +162,15 @@ $("question-form").addEventListener("submit",event=>{
 });
 $("back").addEventListener("click",()=>{if(index>0){index--;renderQuestion(true);}});
 function buildCalculations(){
- const nums=responses.slice(0,6),sum=nums.reduce((a,b)=>a+b,0),mean=sum/6;
- const a=responses.slice(6).filter(value=>value==="Andrea").length,c=3-a;
+ const nums=responses.slice(1,7),sum=nums.reduce((a,b)=>a+b,0),mean=sum/6;
+ const a=responses.slice(7).filter(value=>value==="Andrea").length,c=3-a;
  const fmt=value=>new Intl.NumberFormat("es-ES",{maximumFractionDigits:2}).format(value);
  return [
+ {title:"Calibrando el aplausómetro rural",formula:(100-responses[0])+" % Doncos + "+responses[0]+" % Vilafiz = 100 % festa",note:"Resultado oficial: dos pueblos, cero perdedores y una boda que se oye desde el prado.",log:"✓ Gargantas calentadas\n✓ Rivalidad disuelta en buena leche"},
  {title:"Reuniendo vuestras anécdotas",formula:"S = "+nums.join(" + ")+" = "+fmt(sum),note:"Seis respuestas. Un rebaño entero de recuerdos.",log:"✓ Respuestas recogidas\n✓ Primos excluidos del comité científico"},
  {title:"Calculando la media del rebaño",formula:"μ = "+fmt(sum)+" / 6 = "+fmt(mean),note:"Promedio oficial de anécdotas por pregunta.",log:"✓ Datos pasados por el colador\n→ Ajustando el coeficiente de cachondeo"},
  {title:"Integrando la producción de leche",formula:"∫₀¹ ("+fmt(sum)+"t + 1) dt = "+fmt(sum/2+1)+" L",note:"Modelo lechero: vuestras respuestas alimentan la integral.",log:"✓ Integral definida resuelta\n→ Pasteurizando los resultados"},
- {title:"Midiendo quién lleva la iniciativa",formula:"A = "+a+" · C = "+c+" → A + C = 3",note:"Primer paso: "+responses[6]+". Impuntualidad: "+responses[7]+". Siesta de cine: "+responses[8]+".",log:"✓ Tres méritos repartidos\n→ Consultando al consejo de vacas"},
+ {title:"Midiendo quién lleva la iniciativa",formula:"A = "+a+" · C = "+c+" → A + C = 3",note:"Primer paso: "+responses[7]+". Impuntualidad: "+responses[8]+". Siesta de cine: "+responses[9]+".",log:"✓ Tres méritos repartidos\n→ Consultando al consejo de vacas"},
  {title:"Derivando la química de la pareja",formula:"d/dt [("+a+" + "+c+")t²] = 6t",note:"La complicidad crece. La derivada lo confirma.",log:"✓ Compatibilidad con el pasto: excelente\n→ Eliminando grumos de la ecuación"},
  {title:"Resolviendo la integral del amor",formula:"∫₀¹ 6t dt = 3  ♡",note:"Tres nuevas respuestas y una historia en común.",log:"✓ Integral amorosa completada\n→ Dejando reposar la mezcla"},
  {title:"Aplicando el teorema de la buena leche",formula:"lim (amor + paciencia) = ∞",note:"Cuando los años tienden a infinito. Demostración: vosotros.",log:"✓ Leche de primera calidad\n✓ Bendición del rebaño recibida"},
@@ -161,7 +194,7 @@ function showResult(){
  $("calc").classList.add("hidden");$("result").classList.remove("hidden");$("result").classList.add("fade");
  $("code").replaceChildren();for(const digit of FINAL_CODE){const span=document.createElement("span");span.textContent=digit;$("code").append(span);}
  $("code").setAttribute("aria-label","Combinación del candado: "+FINAL_CODE.split("").join(", "));
- $("answers").replaceChildren();responses.forEach((answer,i)=>{const li=document.createElement("li");li.textContent=QUESTIONS[i].text+" ";const strong=document.createElement("strong");strong.textContent=answer;li.append(strong);$("answers").append(li);});
+ $("answers").replaceChildren();responses.forEach((answer,i)=>{const li=document.createElement("li");li.textContent=QUESTIONS[i].text+" ";const strong=document.createElement("strong");strong.textContent=QUESTIONS[i].type==="slider"?"Doncos "+(100-answer)+" % · Vilafiz "+answer+" % · ¡Todos de fiesta!":answer;li.append(strong);$("answers").append(li);});
  $("result-title").focus({preventScroll:true});
 }
 $("restart").addEventListener("click",()=>{clearTimeout(calculationTimer);index=0;selected=null;responses.length=0;$("result").classList.add("hidden");$("quiz").classList.remove("hidden");renderQuestion(true);});
