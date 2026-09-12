@@ -1,50 +1,171 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Prueba científico-familiar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#294b39">
+<meta name="description" content="Andrea y Carlos. Nueve preguntas, un poquito de ciencia y una historia de amor de la buena.">
+<title>Andrea & Carlos · Amor del bueno</title>
 <style>
-  :root{--bg:#07111f;--card:#0d1b2a;--text:#f4f7fb;--muted:#9fb0c3;--accent:#72e6c2;--accent2:#62a7ff;--shadow:0 18px 55px rgba(0,0,0,.35)}
-  *{box-sizing:border-box} body{margin:0;min-height:100vh;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at top right,rgba(98,167,255,.18),transparent 34%),radial-gradient(circle at bottom left,rgba(114,230,194,.12),transparent 30%),var(--bg)}
-  .wrap{max-width:760px;margin:0 auto;padding:22px}.hero{text-align:center;padding:28px 10px 14px}.badge{display:inline-block;padding:7px 12px;border:1px solid rgba(114,230,194,.35);border-radius:999px;color:var(--accent);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;background:rgba(114,230,194,.06)}
-  h1{font-size:clamp(2rem,7vw,3.7rem);line-height:1;margin:16px 0 12px}.sub{color:var(--muted);font-size:1rem;line-height:1.5;margin:0 auto;max-width:590px}.card{margin-top:20px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.018));border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:22px;box-shadow:var(--shadow);backdrop-filter:blur(8px)}
-  .progress-row{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:14px}.progress{height:8px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;flex:1}.bar{height:100%;width:16.66%;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:.35s}.counter{font-size:.85rem;color:var(--muted);white-space:nowrap}
-  .question{font-size:1.45rem;line-height:1.28;margin:22px 0}.hint{font-size:.9rem;color:var(--muted);margin-top:-8px;margin-bottom:18px}input{width:100%;font-size:2.2rem;text-align:center;border-radius:18px;padding:16px 18px;border:1px solid rgba(255,255,255,.12);background:#081523;color:#fff;outline:none}input:focus{border-color:var(--accent2);box-shadow:0 0 0 4px rgba(98,167,255,.12)}button{width:100%;margin-top:14px;border:0;border-radius:18px;padding:16px 20px;font-weight:800;font-size:1rem;cursor:pointer;color:#052019;background:linear-gradient(90deg,var(--accent),#8ef0d2)}button.secondary{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.08)}.hidden{display:none!important}
-  .terminal{background:#03090f;border:1px solid rgba(114,230,194,.18);border-radius:18px;padding:18px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#a9ffd8;min-height:250px;white-space:pre-line;line-height:1.55;overflow:hidden}.spinner{width:56px;height:56px;border:5px solid rgba(255,255,255,.08);border-top-color:var(--accent);border-radius:50%;animation:spin .9s linear infinite;margin:0 auto 18px}@keyframes spin{to{transform:rotate(360deg)}}.result{text-align:center}.code{font-size:clamp(4rem,18vw,7rem);letter-spacing:.14em;font-weight:950;line-height:1;margin:22px 0 8px;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}.answers{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.pill{border-radius:14px;padding:10px;background:rgba(255,255,255,.045);color:var(--muted);font-size:.82rem}.footer{text-align:center;color:#6e8299;font-size:.78rem;padding:22px}@media(max-width:560px){.wrap{padding:14px}.card{padding:18px;border-radius:20px}.question{font-size:1.25rem}}
+:root{--paper:#f8f4e9;--green:#294b39;--muted:#6d7566;--line:#dedfce;--gold:#b48249;--white:#fffdf7}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--green);font-family:Arial,Helvetica,sans-serif;font-size:15px}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.17;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%237b785e' filter='url(%23n)' opacity='.23' d='M0 0h160v160H0z'/%3E%3C/svg%3E");z-index:5}
+button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:5px}.hidden{display:none!important}
+.topline{border-bottom:1px solid var(--line);max-width:1120px;margin:auto;padding:22px 28px;display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:2px;text-transform:uppercase}.monogram{font-family:Georgia,serif;font-size:24px;letter-spacing:-2px}.topline span:last-child{color:var(--muted)}
+main{max-width:1000px;margin:auto;padding:0 24px}.hero{text-align:center;padding:43px 0 0}.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;font-weight:600}.hero h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(45px,8vw,78px);letter-spacing:-3px;line-height:1.08;margin:20px 0 16px}.hero h1 em{font-weight:400;color:#8a9471}.hero p{font-size:14px;color:var(--muted);line-height:1.8;max-width:430px;margin:auto}.landscape{width:100%;height:auto;display:block;margin:15px auto -3px;max-height:192px}.experience{position:relative;max-width:670px;margin:0 auto}.card{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:32px 42px;box-shadow:0 14px 40px #294b3908;position:relative}.card:before{content:"";position:absolute;top:6px;left:6px;right:6px;bottom:6px;border:1px solid #e9e8da;pointer-events:none;border-radius:3px}.card-top{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:10px;letter-spacing:1.6px;text-transform:uppercase}.chapter{color:var(--gold)}.progress{height:3px;background:#e9ecdf;margin:17px 0 26px;overflow:hidden}.bar{height:100%;background:#7d9464;transition:width .5s}.question-icon{width:45px;height:45px;border-radius:50%;background:#eff1e5;display:grid;place-items:center;font-size:21px;margin-bottom:16px}h2{font-family:Georgia,serif;font-size:clamp(25px,4.5vw,32px);font-weight:400;line-height:1.25;margin:0 0 12px;letter-spacing:-.6px}.hint{color:var(--muted);font-size:12px;line-height:1.6;margin:0 0 23px}.number-wrap{display:flex;align-items:center;border:1px solid #cdd4be;background:#f7f8ef;border-radius:4px;overflow:hidden}.number-wrap input{min-width:0;width:100%;border:0;background:transparent;color:var(--green);font-family:Georgia,serif;font-size:34px;padding:13px 20px;outline-offset:-5px}.number-wrap span{font-size:11px;color:var(--muted);padding-right:20px}.choices{display:grid;grid-template-columns:1fr 1fr;gap:12px}.choice{border:1px solid #cdd4be;border-radius:4px;background:#f7f8ef;color:var(--green);padding:19px 10px;font-family:Georgia,serif;font-size:22px;transition:.2s}.choice[aria-pressed=true]{background:var(--green);color:var(--paper);box-shadow:0 0 0 3px #dfe5d4}.choice:hover{border-color:var(--green)}.primary{width:100%;border:1px solid var(--green);border-radius:4px;background:var(--green);color:var(--paper);padding:17px 20px;font-size:12px;letter-spacing:.4px;display:flex;justify-content:space-between;align-items:center;margin-top:18px;transition:background .2s,transform .2s}.primary:hover{background:#3e6048;transform:translateY(-1px)}.bottom-row{display:flex;justify-content:space-between;align-items:center;margin-top:17px;color:var(--muted);font-size:10px;gap:14px}.back,.restart{background:none;border:0;color:var(--green);padding:5px 0;font-size:11px;text-decoration:underline;text-underline-offset:4px}.back:disabled{visibility:hidden}.error{color:#a04330;font-size:12px;margin:10px 0 0}.footnote{text-align:center;font-family:Georgia,serif;font-style:italic;color:#828772;font-size:13px;margin:22px 0 0}.footer{max-width:1120px;margin:35px auto 0;padding:21px 24px 26px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:10px;letter-spacing:1px}.heart{color:#ab785b}
+.calc-card{text-align:center}.calc-card .eyebrow{color:var(--gold)}.calc-card h2{margin:18px 0 9px}.milk{width:49px;height:75px;border:2px solid var(--green);border-radius:6px 6px 14px 14px;margin:24px auto 20px;position:relative;background:#e5ebda;overflow:hidden}.milk:after{content:"";position:absolute;left:-20%;width:140%;height:120%;background:#fffdf7;bottom:var(--fill,0%);border-radius:40%;animation:wave 3s linear infinite;transition:bottom 1.5s}.milk:before{content:"L";position:absolute;z-index:1;left:0;right:0;top:28px;font-family:Georgia,serif;font-size:23px}.board{text-align:left;background:#244231;color:#f5f0dc;border-radius:4px;padding:24px;margin-top:22px;background-image:linear-gradient(#ffffff05 1px,transparent 1px),linear-gradient(90deg,#ffffff05 1px,transparent 1px);background-size:22px 22px}.board-label{font-size:9px;letter-spacing:2px;color:#c3cda9;text-transform:uppercase}.formula{font-family:Georgia,serif;font-size:clamp(21px,4.4vw,32px);line-height:1.65;margin:18px 0;min-height:90px;overflow-wrap:anywhere}.formula small{display:block;font-family:Arial,sans-serif;font-size:11px;color:#cbd5bc;line-height:1.6}.calc-log{font-family:monospace;font-size:10px;color:#ccdabf;line-height:1.8;min-height:55px;white-space:pre-line}.calc-progress{display:flex;justify-content:space-between;font-size:10px;margin-top:18px}.result{text-align:center}.seal{border:1px solid #b9c4a6;border-radius:50%;height:70px;width:70px;margin:0 auto 22px;display:grid;place-items:center;font-size:32px;background:#f0f2e5}.code{display:flex;justify-content:center;gap:12px;margin:26px 0}.code span{background:#eff1e4;border:1px solid #cdd4bd;border-radius:6px;font-family:Georgia,serif;font-size:64px;line-height:1;padding:17px 21px;box-shadow:inset 0 -4px 0 #e2e7d5}.result p{color:var(--muted);font-size:13px;line-height:1.7}.result details{text-align:left;border-top:1px solid var(--line);margin-top:25px;padding-top:18px;font-size:12px}.result summary{cursor:pointer}.answer-list{padding-left:20px;color:var(--muted);line-height:1.6}.answer-list li{padding:7px 0}.answer-list strong{color:var(--green)}.restart{margin-top:22px}.fade{animation:appear .4s ease both}
+@keyframes wave{to{transform:rotate(360deg)}}@keyframes appear{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}@media(max-width:600px){.topline{padding:17px 20px;font-size:8px;letter-spacing:1.3px}.topline .middle{display:none}main{padding:0 16px}.hero{padding-top:32px}.hero h1{letter-spacing:-2px;margin-top:16px}.hero p{font-size:12px;max-width:295px}.eyebrow{font-size:9px;letter-spacing:2px}.landscape{width:calc(100% + 24px);max-width:none;margin-left:-12px;min-height:115px}.card{padding:25px 23px}.card-top{font-size:9px;letter-spacing:1px}.footer{margin-top:25px;font-size:8px;letter-spacing:.6px}.footnote{font-size:12px}.formula{min-height:110px}.board{padding:20px 16px}.code span{font-size:54px;padding:16px 18px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+.thinking-photo{margin:0 0 20px;padding:8px;background:var(--white);border:1px solid var(--line);border-radius:6px;box-shadow:0 10px 25px #294b3909}.thinking-photo img{display:block;width:100%;height:auto;border-radius:3px}.thinking-photo figcaption{text-align:center;font-family:Georgia,serif;font-style:italic;font-size:12px;color:var(--muted);padding:12px 4px 5px}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="hero"><div class="badge">Sistema de cálculo familiar v1.0</div><h1>Prueba científico-familiar</h1><p class="sub">Responded sin ayuda. El sistema analizará vuestras estimaciones y calculará la contraseña final del candado.</p></div>
-  <section id="quiz" class="card">
-    <div class="progress-row"><div class="progress"><div id="bar" class="bar"></div></div><div id="counter" class="counter">1 / 6</div></div>
-    <div id="question" class="question"></div><div class="hint">Introducid un número y seguid. No vale preguntar a los primos.</div>
-    <input id="answer" type="number" inputmode="numeric" min="0" placeholder="0" /><button id="next">Confirmar respuesta</button>
-  </section>
-  <section id="calc" class="card hidden"><div class="spinner"></div><h2 style="text-align:center;margin-top:0">Calculando contraseña...</h2><div id="terminal" class="terminal">Iniciando sistema...</div></section>
-  <section id="result" class="card result hidden"><div class="badge">Cálculo completado</div><h2>Contraseña obtenida</h2><div id="code" class="code">638</div><p class="sub">Resultado validado por el algoritmo científico-familiar.</p><div id="answers" class="answers"></div><button class="secondary" onclick="location.reload()">Volver a empezar</button></section>
-  <div class="footer">⚠️ Sistema totalmente fiable según fuentes familiares no verificadas.</div>
+<header class="topline"><span class="monogram">A&C</span><span class="middle">Una historia para toda la vida</span><span>Nuestra boda · Nuestro rebaño</span></header>
+<main>
+<section class="hero">
+<div class="eyebrow">Entre prados, risas y mucho amor</div>
+<h1>Andrea <em>&</em> Carlos</h1>
+<p>El amor del bueno no se calcula.<br>Pero la contraseña de este candado… vamos a intentarlo.</p>
+<svg class="landscape" viewBox="0 0 960 190" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs>
+<g id="cow" stroke="#3f5540" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+<path d="M19 49L17 76h8l6-25m40 0 2 25h8l1-33" fill="#faf7eb"/>
+<path d="M17 31Q-1 36 6 57" /><path d="m5 55-3 7 6-3" fill="#3f5540"/>
+<path d="M20 24Q43 17 70 25L88 40 76 58H28Q14 53 17 36Z" fill="#faf7eb"/>
+<path d="M29 23q-7 14 6 21t15-22M59 25q-9 10 4 16l14-7" fill="#3f5540" stroke="none"/>
+<path d="m79 26-6-10q10 0 13 12m9 0 8-12q-11 0-12 12" fill="#c7b887"/>
+<path d="M80 30q-16-9-16 1 3 8 15 7m17-8q14-8 14 1-3 8-13 7" fill="#faf7eb"/>
+<path d="M80 27q11-6 18 4l-2 23q-7 11-18-1Z" fill="#faf7eb"/>
+<path d="M79 29q10-4 9 10l-9 3" fill="#3f5540" stroke="none"/>
+<ellipse cx="87" cy="53" rx="11" ry="7" fill="#dcb6a1"/><path d="M83 53h.5m7 0h.5M93 39h.5"/>
+<path d="m78 62 15 1" stroke="#b48249"/><path d="m86 62-3 7h7l-2-7" fill="#b48249" stroke="#b48249"/>
+</g>
+<g id="grass" stroke="#82916d" stroke-linecap="round"><path d="m0 0-3-9m3 9 3-13m-3 13 7-6"/></g>
+</defs>
+<circle cx="745" cy="47" r="28" fill="#e9dfbd"/>
+<path d="M0 135Q140 52 324 122T639 108Q811 52 960 124V190H0Z" fill="#e7ead9"/>
+<path d="M0 157Q179 103 359 150T673 134Q812 116 960 154V190H0Z" fill="#d8dfc7"/>
+<path d="M0 180q200-30 401-6t559-7" stroke="#b7c4a3"/>
+<g stroke="#8c9b7c" stroke-width="2"><path d="M54 149v-30m36 22v-31m36 26v-32m36 29v-31m-114 22 123-18m-123 30 123-18"/></g>
+<g transform="translate(744 93)" stroke="#657959" stroke-width="1.5"><path d="M0 51V12L31-9l32 21v39" fill="#eee8d6"/><path d="m-7 15 38-30 40 30" fill="#80916f"/><path d="M22 51V25h20v26M22 25l20 26m0-26L22 51"/><path d="M27 5h8v8h-8Z" fill="#c8d1b8"/></g>
+<use href="#cow" transform="translate(239 83) scale(1.05)"/><use href="#cow" transform="translate(561 94) scale(-.9 .9)"/>
+<path d="M407 105c-16-13-22 4 0 17 22-13 16-30 0-17" fill="#bb8970"/>
+<use href="#grass" x="210" y="164"/><use href="#grass" x="359" y="175"/><use href="#grass" x="604" y="169"/><use href="#grass" x="724" y="177"/><use href="#grass" x="857" y="163"/><use href="#grass" x="93" y="177"/>
+</svg>
+</section>
+<div class="experience">
+<figure id="thinking-photo" class="thinking-photo"><img src="foto_pensando.png" width="1672" height="941" alt="Andrea y Carlos pensando juntos entre libros y fórmulas matemáticas" fetchpriority="high"><figcaption>Dos cabezas, un equipo y una incógnita por resolver.</figcaption></figure>
+<section id="quiz" class="card">
+<div class="card-top"><span class="chapter" id="chapter">01 / Anécdotas del rebaño</span><span id="counter">Pregunta 1 de 9</span></div>
+<div class="progress" role="progressbar" aria-label="Progreso del cuestionario" aria-valuemin="0" aria-valuemax="9" aria-valuenow="0" id="quiz-progress"><div id="bar" class="bar"></div></div>
+<form id="question-form" novalidate>
+<div id="question-content" class="fade"><div class="question-icon" id="question-icon" aria-hidden="true">🌾</div>
+<h2 id="question" tabindex="-1"></h2><p class="hint" id="hint"></p>
+<div id="number-wrap" class="number-wrap"><input id="answer" type="number" inputmode="numeric" min="0" max="1000000" step="1" placeholder="0" aria-labelledby="question" aria-describedby="hint error"><span>personas</span></div>
+<div id="choices" class="choices hidden" role="group" aria-labelledby="question"><button type="button" class="choice" data-value="Andrea" aria-pressed="false">Andrea</button><button type="button" class="choice" data-value="Carlos" aria-pressed="false">Carlos</button></div></div>
+<p id="error" class="error" role="alert"></p>
+<button id="next" class="primary" type="submit"><span id="next-label">Guardar y seguir</span><span aria-hidden="true">→</span></button>
+<div class="bottom-row"><button id="back" type="button" class="back">← Anterior</button><span>Sin ayuda. Ni siquiera de los primos.</span></div>
+</form>
+</section>
+<section id="calc" class="card calc-card hidden" aria-labelledby="calc-title">
+<div class="eyebrow">Laboratorio de amor & ganadería</div><div class="milk" id="milk" aria-hidden="true"></div>
+<h2 id="calc-title" tabindex="-1">Aquí hay mucha ciencia.<br>Y muy buena leche.</h2>
+<p class="hint">Vuestras respuestas ya están en la ordeñadora de datos.</p>
+<div class="board"><div class="board-label">Cuaderno de campo · Cálculo en curso</div><div id="formula" class="formula"></div><div id="calc-log" class="calc-log"></div></div>
+<div class="calc-progress" role="status"><span id="calc-status">Contando el rebaño…</span><span id="percent">0 %</span></div><div class="progress"><div id="calc-bar" class="bar" style="width:0"></div></div>
+</section>
+<section id="result" class="card result hidden" aria-labelledby="result-title">
+<div class="seal" aria-hidden="true">♡</div><div class="eyebrow">Certificado por nuestro rebaño</div><h2 id="result-title" tabindex="-1" style="margin-top:18px">El secreto está en la leche.<br>Y en quereros así.</h2>
+<p>La ciencia ha hablado. Ahora os toca abrir el candado.</p><div id="code" class="code" aria-label="Combinación del candado"></div><div class="eyebrow">Vuestra combinación</div>
+<details><summary>Las respuestas de vuestra historia</summary><ol id="answers" class="answer-list"></ol></details>
+<button id="restart" class="restart">Volver a empezar</button>
+</section>
+<p class="footnote">Amor del bueno. Del de toda la vida.</p>
 </div>
+</main>
+<footer class="footer"><span>ANDREA & CARLOS <span class="heart">♡</span></span><span>100 % amor · 0 % rigor científico</span></footer>
 <script>
+'use strict';
 const QUESTIONS=[
-"¿Cuántas personas de aquí han visto a alguno de los novios caerse de un banco?",
-"¿Cuántas personas han visto a la novia dormir en la calle?",
-"¿Cuántas personas han visto al novio con tetas en la cabeza?",
-"¿Cuántas personas tienen los pies más grandes que el novio?",
-"¿Cuántas personas son más altas que la novia?",
-"¿A cuántas personas les quedaría mal la americana del novio?"
+{text:"¿Cuántas personas de aquí han visto a alguno de los novios caerse de un banco?",icon:"🌾"},
+{text:"¿Cuántas personas han visto a la novia dormir en la calle?",icon:"🌙"},
+{text:"¿Cuántas personas han visto al novio con tetas en la cabeza?",icon:"🐄"},
+{text:"¿Cuántas personas tienen los pies más grandes que el novio?",icon:"👢"},
+{text:"¿Cuántas personas son más altas que la novia?",icon:"🌻"},
+{text:"¿A cuántas personas les quedaría mal la americana del novio?",icon:"🌿"},
+{text:"¿Quién dio el primer paso para que empezara vuestra historia?",icon:"❤️",type:"choice"},
+{text:"¿Quién es más probable que llegue tarde a una cita?",icon:"⏰",type:"choice"},
+{text:"¿Quién tiene más posibilidades de quedarse dormido viendo una película?",icon:"😴",type:"choice"}
 ];
 const FINAL_CODE="638";
-let i=0; const responses=[];
-const q=document.getElementById('question'),input=document.getElementById('answer'),next=document.getElementById('next'),bar=document.getElementById('bar'),counter=document.getElementById('counter');
-function renderQuestion(){q.textContent=QUESTIONS[i];counter.textContent=`${i+1} / ${QUESTIONS.length}`;bar.style.width=`${((i+1)/QUESTIONS.length)*100}%`;input.value='';setTimeout(()=>input.focus(),100)}
+const $=id=>document.getElementById(id);
+let index=0,selected=null,calculationTimer=null;
+const responses=[];
+function renderQuestion(focus=false){
+ const item=QUESTIONS[index],choice=item.type==="choice";
+ $("question").textContent=item.text;$("question-icon").textContent=item.icon;
+ $("counter").textContent="Pregunta "+(index+1)+" de "+QUESTIONS.length;
+ $("chapter").textContent=choice?"02 / Vuestra historia":"01 / Anécdotas del rebaño";
+ $("bar").style.width=(index/QUESTIONS.length*100)+"%";$("quiz-progress").setAttribute("aria-valuenow",index);
+ $("hint").textContent=choice?"Decidid juntos quién se lleva este mérito.":"Haced vuestra mejor estimación. Cada anécdota cuenta.";
+ $("number-wrap").classList.toggle("hidden",choice);$("answer").disabled=choice;
+ $("choices").classList.toggle("hidden",!choice);$("answer").value=choice?"":(responses[index]??"");
+ selected=choice?(responses[index]??null):null;
+ document.querySelectorAll(".choice").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.value===selected)));
+ $("back").disabled=index===0;$("error").textContent="";
+ $("next-label").textContent=index===QUESTIONS.length-1?"Calcular nuestra combinación":"Guardar y seguir";
+ $("question-content").classList.remove("fade");void $("question-content").offsetWidth;$("question-content").classList.add("fade");
+ if(focus)$("question").focus({preventScroll:true});
+}
+document.querySelectorAll(".choice").forEach(button=>button.addEventListener("click",()=>{
+ selected=button.dataset.value;$("error").textContent="";
+ document.querySelectorAll(".choice").forEach(option=>option.setAttribute("aria-pressed",String(option===button)));
+}));
+$("question-form").addEventListener("submit",event=>{
+ event.preventDefault();const choice=QUESTIONS[index].type==="choice";const raw=$("answer").value;const value=choice?selected:Number(raw);
+ if(choice?!selected:(raw.trim()===""||!Number.isSafeInteger(value)||value<0||value>1000000)){
+  $("error").textContent=choice?"Elegid a Andrea o a Carlos para continuar.":"Introducid un número entero entre 0 y 1.000.000.";return;
+ }
+ responses[index]=value;
+ if(index<QUESTIONS.length-1){index++;renderQuestion(true);}else startCalculation();
+});
+$("back").addEventListener("click",()=>{if(index>0){index--;renderQuestion(true);}});
+function buildCalculations(){
+ const nums=responses.slice(0,6),sum=nums.reduce((a,b)=>a+b,0),mean=sum/6;
+ const a=responses.slice(6).filter(value=>value==="Andrea").length,c=3-a;
+ const fmt=value=>new Intl.NumberFormat("es-ES",{maximumFractionDigits:2}).format(value);
+ return [
+ {title:"Reuniendo vuestras anécdotas",formula:"S = "+nums.join(" + ")+" = "+fmt(sum),note:"Seis respuestas. Un rebaño entero de recuerdos.",log:"✓ Respuestas recogidas\n✓ Primos excluidos del comité científico"},
+ {title:"Calculando la media del rebaño",formula:"μ = "+fmt(sum)+" / 6 = "+fmt(mean),note:"Promedio oficial de anécdotas por pregunta.",log:"✓ Datos pasados por el colador\n→ Ajustando el coeficiente de cachondeo"},
+ {title:"Integrando la producción de leche",formula:"∫₀¹ ("+fmt(sum)+"t + 1) dt = "+fmt(sum/2+1)+" L",note:"Modelo lechero: vuestras respuestas alimentan la integral.",log:"✓ Integral definida resuelta\n→ Pasteurizando los resultados"},
+ {title:"Midiendo quién lleva la iniciativa",formula:"A = "+a+" · C = "+c+" → A + C = 3",note:"Primer paso: "+responses[6]+". Impuntualidad: "+responses[7]+". Siesta de cine: "+responses[8]+".",log:"✓ Tres méritos repartidos\n→ Consultando al consejo de vacas"},
+ {title:"Derivando la química de la pareja",formula:"d/dt [("+a+" + "+c+")t²] = 6t",note:"La complicidad crece. La derivada lo confirma.",log:"✓ Compatibilidad con el pasto: excelente\n→ Eliminando grumos de la ecuación"},
+ {title:"Resolviendo la integral del amor",formula:"∫₀¹ 6t dt = 3  ♡",note:"Tres nuevas respuestas y una historia en común.",log:"✓ Integral amorosa completada\n→ Dejando reposar la mezcla"},
+ {title:"Aplicando el teorema de la buena leche",formula:"lim (amor + paciencia) = ∞",note:"Cuando los años tienden a infinito. Demostración: vosotros.",log:"✓ Leche de primera calidad\n✓ Bendición del rebaño recibida"},
+ {title:"Preparando la combinación",formula:"Recuerdos + amor + muuucha suerte",note:"Última comprobación del candado…",log:"✓ Cálculos sellados con un beso\n✓ Todo listo para la gran apertura"}
+ ];
+}
+function startCalculation(){
+ $("quiz").classList.add("hidden");$("calc").classList.remove("hidden");$("calc-title").focus({preventScroll:true});
+ const steps=buildCalculations();let step=0;
+ function tick(){
+  if(step===steps.length){showResult();return;}
+  const current=steps[step],pct=Math.round((step+1)/steps.length*100);
+  $("formula").replaceChildren(document.createTextNode(current.formula));
+  const note=document.createElement("small");note.textContent=current.note;$("formula").append(note);
+  $("calc-log").textContent=current.log;$("calc-status").textContent=current.title;
+  $("percent").textContent=pct+" %";$("calc-bar").style.width=pct+"%";$("milk").style.setProperty("--fill",pct+"%");
+  step++;calculationTimer=setTimeout(tick,2300);
+ }tick();
+}
+function showResult(){
+ $("calc").classList.add("hidden");$("result").classList.remove("hidden");$("result").classList.add("fade");
+ $("code").replaceChildren();for(const digit of FINAL_CODE){const span=document.createElement("span");span.textContent=digit;$("code").append(span);}
+ $("code").setAttribute("aria-label","Combinación del candado: "+FINAL_CODE.split("").join(", "));
+ $("answers").replaceChildren();responses.forEach((answer,i)=>{const li=document.createElement("li");li.textContent=QUESTIONS[i].text+" ";const strong=document.createElement("strong");strong.textContent=answer;li.append(strong);$("answers").append(li);});
+ $("result-title").focus({preventScroll:true});
+}
+$("restart").addEventListener("click",()=>{clearTimeout(calculationTimer);index=0;selected=null;responses.length=0;$("result").classList.add("hidden");$("quiz").classList.remove("hidden");renderQuestion(true);});
 renderQuestion();
-next.addEventListener('click',()=>{if(input.value===''){input.focus();return}responses.push(input.value);i++;if(i<QUESTIONS.length)renderQuestion();else startCalculation()});
-input.addEventListener('keydown',e=>{if(e.key==='Enter')next.click()});
-function startCalculation(){document.getElementById('quiz').classList.add('hidden');document.getElementById('calc').classList.remove('hidden');const lines=[
-'Recibiendo respuestas de los novios...','Comparando datos con archivo familiar...','Aplicando corrección por alcohol ingerido...','Analizando altura, calzado y americana...','Consultando base de datos de anécdotas comprometidas...','Calculando índice de fiabilidad de memoria...','Compensando errores humanos...','Ejecutando algoritmo NASA-Cousins™...','Verificando coherencia estadística...','Generando combinación final del candado...'];
-const term=document.getElementById('terminal');term.textContent='';let n=0;const timer=setInterval(()=>{const pct=Math.min(99,Math.round(((n+1)/lines.length)*100));term.textContent+=`[${String(pct).padStart(2,'0')}%] ${lines[n]}\n`;term.scrollTop=term.scrollHeight;n++;if(n===lines.length){clearInterval(timer);setTimeout(showResult,900)}},620)}
-function showResult(){document.getElementById('calc').classList.add('hidden');document.getElementById('result').classList.remove('hidden');document.getElementById('code').textContent=FINAL_CODE;document.getElementById('answers').innerHTML=responses.map((r,idx)=>`<div class="pill">P${idx+1}<br><strong style="color:#fff;font-size:1.2rem">${r}</strong></div>`).join('')}
 </script>
-</body></html>
+</body>
+</html>
