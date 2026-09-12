@@ -16,6 +16,7 @@ main{max-width:1000px;margin:auto;padding:0 24px}.hero{text-align:center;padding
 @keyframes wave{to{transform:rotate(360deg)}}@keyframes appear{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}@media(max-width:600px){.topline{padding:17px 20px;font-size:8px;letter-spacing:1.3px}.topline .middle{display:none}main{padding:0 16px}.hero{padding-top:32px}.hero h1{letter-spacing:-2px;margin-top:16px}.hero p{font-size:12px;max-width:295px}.eyebrow{font-size:9px;letter-spacing:2px}.landscape{width:calc(100% + 24px);max-width:none;margin-left:-12px;min-height:115px}.card{padding:25px 23px}.card-top{font-size:9px;letter-spacing:1px}.footer{margin-top:25px;font-size:8px;letter-spacing:.6px}.footnote{font-size:12px}.formula{min-height:110px}.board{padding:20px 16px}.code span{font-size:54px;padding:16px 18px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
 .thinking-photo{margin:0 0 20px;padding:8px;background:var(--white);border:1px solid var(--line);border-radius:6px;box-shadow:0 10px 25px #294b3909}.thinking-photo img{display:block;width:100%;height:auto;border-radius:3px}.thinking-photo figcaption{text-align:center;font-family:Georgia,serif;font-style:italic;font-size:12px;color:var(--muted);padding:12px 4px 5px}
 .cheer-scores{display:flex;justify-content:space-between;gap:16px;margin:8px 0 12px}.cheer-team{display:flex;flex-direction:column;gap:6px;font-family:Georgia,serif;font-size:24px;color:#b53144}.cheer-team:last-child{text-align:right;color:#2467a1}.cheer-team output{font-size:42px;font-variant-numeric:tabular-nums}.cheer-slider{display:block;width:100%;height:48px;margin:0;appearance:none;-webkit-appearance:none;background:transparent;cursor:ew-resize;--split:50%}.cheer-slider::-webkit-slider-runnable-track{height:14px;border-radius:20px;background:linear-gradient(to right,#bf4655 0%,#bf4655 var(--split),#367db4 var(--split),#367db4 100%)}.cheer-slider::-moz-range-track{height:14px;border-radius:20px;background:linear-gradient(to right,#bf4655 0%,#bf4655 var(--split),#367db4 var(--split),#367db4 100%)}.cheer-slider::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:38px;height:38px;border-radius:50%;background:var(--white);border:3px solid var(--green);margin-top:-12px;box-shadow:0 3px 8px #294b3926}.cheer-slider::-moz-range-thumb{width:32px;height:32px;border-radius:50%;background:var(--white);border:3px solid var(--green);box-shadow:0 3px 8px #294b3926}.cheer-directions{display:flex;justify-content:space-between;color:var(--muted);font-size:10px}.cheer-message{text-align:center;background:#f0f2e5;border:1px dashed #c3ccae;border-radius:5px;padding:17px 12px;margin:20px 0 10px;font-family:Georgia,serif;font-size:18px;line-height:1.4;min-height:86px;display:grid;place-items:center}.cheer-reset{display:block;margin:0 auto;background:transparent;border:0;padding:10px;color:var(--muted);font-size:11px;text-decoration:underline;text-underline-offset:3px}
+.photo-preview,.camera-preview{display:block;width:100%;max-height:380px;object-fit:contain;background:#e9ecdf;border-radius:5px;margin:18px 0}.camera-preview{transform:scaleX(-1)}.photo-confirm{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.6;margin:18px 0}.photo-confirm input{width:20px;height:20px;flex-shrink:0;accent-color:var(--green)}.primary:disabled{opacity:.45;cursor:not-allowed;transform:none}.photo-status{font-size:12px;line-height:1.6;color:var(--muted);margin:16px 0}.photo-fallback{display:block;font-size:12px;color:var(--muted);margin:20px 0}.photo-fallback input{display:block;width:100%;margin-top:10px}.photo-save{text-decoration:none}.photo-back{margin-top:14px}
 </style>
 </head>
 <body>
@@ -74,6 +75,24 @@ main{max-width:1000px;margin:auto;padding:0 24px}.hero{text-align:center;padding
 <div class="bottom-row"><button id="back" type="button" class="back">← Anterior</button><span id="question-footer">Aquí nadie pierde. ¡Solo se pierde la voz!</span></div>
 </form>
 </section>
+<section id="photo-task" class="card hidden" aria-labelledby="photo-title">
+<div class="card-top"><span class="chapter">04 / Prueba de amor familiar</span><span id="photo-counter">Foto 1 de 2</span></div>
+<div class="question-icon" aria-hidden="true" style="margin-top:24px">📸</div>
+<h2 id="photo-title" tabindex="-1">Andrea, ¡foto con tu suegra!</h2>
+<p class="hint">Acercaos, sonreíd y decid… ¡quesooo! El comité de vacas exige pruebas de este buen rollo.</p>
+<video id="camera-preview" class="camera-preview hidden" autoplay playsinline muted aria-label="Vista previa de la cámara"></video>
+<img id="photo-preview" class="photo-preview hidden" alt="Vuestra foto con la suegra">
+<button id="open-camera" type="button" class="primary">Abrir cámara</button>
+<button id="take-photo" type="button" class="primary hidden">¡Quesooo! Hacer foto</button>
+<label class="photo-fallback">También podéis usar la cámara del dispositivo o elegir una foto:
+<input id="photo-file" type="file" accept="image/*" capture="user"></label>
+<p id="photo-error" class="error" role="alert"></p>
+<button id="save-photo" type="button" class="primary hidden">Descargar foto en este dispositivo ↓</button>
+<p id="photo-status" class="photo-status" role="status">Las fotos se quedan en vuestro dispositivo. No se suben a internet.</p>
+<label id="photo-confirm-wrap" class="photo-confirm hidden"><input id="photo-confirm" type="checkbox">He comprobado que la foto está guardada en el dispositivo.</label>
+<button id="photo-next" type="button" class="primary" disabled>Seguir con la foto de Carlos →</button>
+<button id="photo-back" type="button" class="back photo-back hidden">← Volver a la foto de Andrea</button>
+</section>
 <section id="calc" class="card calc-card hidden" aria-labelledby="calc-title">
 <div class="eyebrow">Laboratorio de amor & ganadería</div><div class="milk" id="milk" aria-hidden="true"></div>
 <h2 id="calc-title" tabindex="-1">Aquí hay mucha ciencia.<br>Y muy buena leche.</h2>
@@ -127,7 +146,7 @@ function renderQuestion(focus=false){
  selected=choice?(responses[index]??null):null;
  document.querySelectorAll(".choice").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.value===selected)));
  $("back").disabled=index===0;$("error").textContent="";
- $("next-label").textContent=slider?"¡Así suena nuestra boda! Seguimos":index===QUESTIONS.length-1?"Calcular nuestra combinación":"Guardar y seguir";
+ $("next-label").textContent=slider?"¡Así suena nuestra boda! Seguimos":index===QUESTIONS.length-1?"Ahora… ¡foto con las suegras!":"Guardar y seguir";
  $("question-content").classList.remove("fade");void $("question-content").offsetWidth;$("question-content").classList.add("fade");
  if(focus)$("question").focus({preventScroll:true});
 }
@@ -158,7 +177,7 @@ $("question-form").addEventListener("submit",event=>{
   $("error").textContent=choice?"Elegid a Andrea o a Carlos para continuar.":"Introducid un número entero entre 0 y 1.000.000.";return;
  }
  responses[index]=value;
- if(index<QUESTIONS.length-1){index++;renderQuestion(true);}else startCalculation();
+ if(index<QUESTIONS.length-1){index++;renderQuestion(true);}else startPhotos();
 });
 $("back").addEventListener("click",()=>{if(index>0){index--;renderQuestion(true);}});
 function buildCalculations(){
@@ -177,6 +196,93 @@ function buildCalculations(){
  {title:"Preparando la combinación",formula:"Recuerdos + amor + muuucha suerte",note:"Última comprobación del candado…",log:"✓ Cálculos sellados con un beso\n✓ Todo listo para la gran apertura"}
  ];
 }
+let photoIndex=0,cameraStream=null,cameraRequest=0;
+const photos=[null,null];
+function stopCamera(){
+ cameraRequest++;
+ if(cameraStream)cameraStream.getTracks().forEach(track=>track.stop());
+ cameraStream=null;$("camera-preview").srcObject=null;
+ $("camera-preview").classList.add("hidden");$("take-photo").classList.add("hidden");
+ $("open-camera").disabled=false;
+}
+function renderPhoto(){
+ stopCamera();const photo=photos[photoIndex],name=photoIndex===0?"Andrea":"Carlos";
+ $("photo-title").textContent=name+", ¡foto con tu suegra!";$("photo-counter").textContent="Foto "+(photoIndex+1)+" de 2";
+ $("photo-preview").classList.toggle("hidden",!photo);
+ if(photo)$("photo-preview").src=photo.url;else $("photo-preview").removeAttribute("src");
+ $("save-photo").classList.toggle("hidden",!photo);
+ $("photo-confirm-wrap").classList.toggle("hidden",!photo?.downloaded);
+ $("photo-confirm").checked=photo?.confirmed??false;
+ $("photo-next").disabled=!photo?.confirmed;
+ $("photo-next").textContent=photoIndex===0?"Seguir con la foto de Carlos →":"¡Fotos listas! Calcular combinación →";
+ $("photo-back").classList.toggle("hidden",photoIndex===0);
+ $("open-camera").textContent=photo?"Repetir foto":"Abrir cámara";
+ $("photo-status").textContent=photo?.downloaded?"Descarga solicitada. Comprobad el archivo en Descargas o Archivos antes de seguir.":"Las fotos se quedan en vuestro dispositivo. No se suben a internet.";
+ $("photo-error").textContent="";$("photo-file").value="";
+}
+function startPhotos(){
+ $("quiz").classList.add("hidden");$("thinking-photo").classList.add("hidden");
+ $("photo-task").classList.remove("hidden");photoIndex=0;renderPhoto();$("photo-title").focus();
+}
+function setPhoto(blob,extension){
+ const previous=photos[photoIndex];
+ if(previous)URL.revokeObjectURL(previous.url);
+ photos[photoIndex]={url:URL.createObjectURL(blob),extension,downloaded:false,confirmed:false};
+ renderPhoto();
+}
+$("open-camera").addEventListener("click",async()=>{
+ stopCamera();const request=cameraRequest;
+ $("photo-error").textContent="";$("open-camera").disabled=true;
+ try{
+  if(!navigator.mediaDevices?.getUserMedia)throw new Error("Camera unavailable");
+  const stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:"user",width:{ideal:1600}},audio:false});
+  if(request!==cameraRequest){stream.getTracks().forEach(track=>track.stop());return;}
+  cameraStream=stream;$("camera-preview").srcObject=stream;
+  $("camera-preview").classList.remove("hidden");$("photo-preview").classList.add("hidden");
+  await $("camera-preview").play();$("take-photo").classList.remove("hidden");
+ }catch(error){
+  if(request!==cameraRequest)return;
+  stopCamera();$("photo-error").textContent="No hemos podido abrir la cámara. Permitid el acceso o usad el selector de foto de abajo.";
+ }finally{if(request===cameraRequest)$("open-camera").disabled=false;}
+});
+$("take-photo").addEventListener("click",()=>{
+ const video=$("camera-preview");
+ if(!video.videoWidth){$("photo-error").textContent="La cámara se está preparando. Probad otra vez en un momento.";return;}
+ const canvas=document.createElement("canvas"),scale=Math.min(1,1920/video.videoWidth);
+ canvas.width=Math.round(video.videoWidth*scale);canvas.height=Math.round(video.videoHeight*scale);
+ canvas.getContext("2d").drawImage(video,0,0,canvas.width,canvas.height);
+ $("take-photo").disabled=true;
+ canvas.toBlob(blob=>{
+  $("take-photo").disabled=false;
+  if(blob)setPhoto(blob,"jpg");else $("photo-error").textContent="No se pudo preparar la foto. Probad de nuevo.";
+ },"image/jpeg",.92);
+});
+$("photo-file").addEventListener("change",()=>{
+ const file=$("photo-file").files[0];if(!file)return;
+ if(!file.type.startsWith("image/")){$("photo-error").textContent="Elegid un archivo de imagen.";return;}
+ if(file.size>30*1024*1024){$("photo-error").textContent="La foto es demasiado grande. Elegid una de menos de 30 MB.";return;}
+ const extension=({ "image/jpeg":"jpg","image/png":"png","image/webp":"webp","image/heic":"heic","image/heif":"heif","image/gif":"gif","image/avif":"avif" })[file.type]||"img";
+ setPhoto(file,extension);
+});
+$("save-photo").addEventListener("click",()=>{
+ const photo=photos[photoIndex];if(!photo)return;
+ const link=document.createElement("a"),name=photoIndex===0?"Andrea":"Carlos";
+ link.href=photo.url;link.download="Boda-"+name+"-con-su-suegra-"+new Date().toISOString().replace(/[:.]/g,"-")+"."+photo.extension;
+ document.body.append(link);link.click();link.remove();
+ photo.downloaded=true;$("photo-confirm-wrap").classList.remove("hidden");
+ $("photo-status").textContent="Descarga solicitada. Si aparece un aviso, aceptad Guardar. Buscad la foto en Descargas o Archivos; si se abre una vista previa, usad Compartir → Guardar imagen o Guardar en Archivos.";
+});
+$("photo-confirm").addEventListener("change",()=>{
+ const photo=photos[photoIndex];if(!photo?.downloaded)return;
+ photo.confirmed=$("photo-confirm").checked;$("photo-next").disabled=!photo.confirmed;
+});
+$("photo-next").addEventListener("click",()=>{
+ if(!photos[photoIndex]?.confirmed)return;
+ if(photoIndex===0){photoIndex=1;renderPhoto();$("photo-title").focus();}
+ else if(photos.every(photo=>photo?.confirmed)){stopCamera();$("photo-task").classList.add("hidden");startCalculation();}
+});
+$("photo-back").addEventListener("click",()=>{photoIndex=0;renderPhoto();$("photo-title").focus();});
+window.addEventListener("pagehide",stopCamera);
 function startCalculation(){
  $("quiz").classList.add("hidden");$("calc").classList.remove("hidden");$("calc-title").focus({preventScroll:true});
  const steps=buildCalculations();let step=0;
@@ -197,7 +303,7 @@ function showResult(){
  $("answers").replaceChildren();responses.forEach((answer,i)=>{const li=document.createElement("li");li.textContent=QUESTIONS[i].text+" ";const strong=document.createElement("strong");strong.textContent=QUESTIONS[i].type==="slider"?"Doncos "+(100-answer)+" % · Vilafiz "+answer+" % · ¡Todos de fiesta!":answer;li.append(strong);$("answers").append(li);});
  $("result-title").focus({preventScroll:true});
 }
-$("restart").addEventListener("click",()=>{clearTimeout(calculationTimer);index=0;selected=null;responses.length=0;$("result").classList.add("hidden");$("quiz").classList.remove("hidden");renderQuestion(true);});
+$("restart").addEventListener("click",()=>{clearTimeout(calculationTimer);stopCamera();photos.forEach(photo=>{if(photo)URL.revokeObjectURL(photo.url);});photos.fill(null);photoIndex=0;index=0;selected=null;responses.length=0;$("result").classList.add("hidden");$("thinking-photo").classList.remove("hidden");$("quiz").classList.remove("hidden");renderQuestion(true);});
 renderQuestion();
 </script>
 </body>
