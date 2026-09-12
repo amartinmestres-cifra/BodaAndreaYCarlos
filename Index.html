@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Prueba científico-familiar</title>
+<style>
+  :root{--bg:#07111f;--card:#0d1b2a;--text:#f4f7fb;--muted:#9fb0c3;--accent:#72e6c2;--accent2:#62a7ff;--shadow:0 18px 55px rgba(0,0,0,.35)}
+  *{box-sizing:border-box} body{margin:0;min-height:100vh;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at top right,rgba(98,167,255,.18),transparent 34%),radial-gradient(circle at bottom left,rgba(114,230,194,.12),transparent 30%),var(--bg)}
+  .wrap{max-width:760px;margin:0 auto;padding:22px}.hero{text-align:center;padding:28px 10px 14px}.badge{display:inline-block;padding:7px 12px;border:1px solid rgba(114,230,194,.35);border-radius:999px;color:var(--accent);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;background:rgba(114,230,194,.06)}
+  h1{font-size:clamp(2rem,7vw,3.7rem);line-height:1;margin:16px 0 12px}.sub{color:var(--muted);font-size:1rem;line-height:1.5;margin:0 auto;max-width:590px}.card{margin-top:20px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.018));border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:22px;box-shadow:var(--shadow);backdrop-filter:blur(8px)}
+  .progress-row{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:14px}.progress{height:8px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;flex:1}.bar{height:100%;width:16.66%;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:.35s}.counter{font-size:.85rem;color:var(--muted);white-space:nowrap}
+  .question{font-size:1.45rem;line-height:1.28;margin:22px 0}.hint{font-size:.9rem;color:var(--muted);margin-top:-8px;margin-bottom:18px}input{width:100%;font-size:2.2rem;text-align:center;border-radius:18px;padding:16px 18px;border:1px solid rgba(255,255,255,.12);background:#081523;color:#fff;outline:none}input:focus{border-color:var(--accent2);box-shadow:0 0 0 4px rgba(98,167,255,.12)}button{width:100%;margin-top:14px;border:0;border-radius:18px;padding:16px 20px;font-weight:800;font-size:1rem;cursor:pointer;color:#052019;background:linear-gradient(90deg,var(--accent),#8ef0d2)}button.secondary{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.08)}.hidden{display:none!important}
+  .terminal{background:#03090f;border:1px solid rgba(114,230,194,.18);border-radius:18px;padding:18px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#a9ffd8;min-height:250px;white-space:pre-line;line-height:1.55;overflow:hidden}.spinner{width:56px;height:56px;border:5px solid rgba(255,255,255,.08);border-top-color:var(--accent);border-radius:50%;animation:spin .9s linear infinite;margin:0 auto 18px}@keyframes spin{to{transform:rotate(360deg)}}.result{text-align:center}.code{font-size:clamp(4rem,18vw,7rem);letter-spacing:.14em;font-weight:950;line-height:1;margin:22px 0 8px;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}.answers{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.pill{border-radius:14px;padding:10px;background:rgba(255,255,255,.045);color:var(--muted);font-size:.82rem}.footer{text-align:center;color:#6e8299;font-size:.78rem;padding:22px}@media(max-width:560px){.wrap{padding:14px}.card{padding:18px;border-radius:20px}.question{font-size:1.25rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero"><div class="badge">Sistema de cálculo familiar v1.0</div><h1>Prueba científico-familiar</h1><p class="sub">Responded sin ayuda. El sistema analizará vuestras estimaciones y calculará la contraseña final del candado.</p></div>
+  <section id="quiz" class="card">
+    <div class="progress-row"><div class="progress"><div id="bar" class="bar"></div></div><div id="counter" class="counter">1 / 6</div></div>
+    <div id="question" class="question"></div><div class="hint">Introducid un número y seguid. No vale preguntar a los primos.</div>
+    <input id="answer" type="number" inputmode="numeric" min="0" placeholder="0" /><button id="next">Confirmar respuesta</button>
+  </section>
+  <section id="calc" class="card hidden"><div class="spinner"></div><h2 style="text-align:center;margin-top:0">Calculando contraseña...</h2><div id="terminal" class="terminal">Iniciando sistema...</div></section>
+  <section id="result" class="card result hidden"><div class="badge">Cálculo completado</div><h2>Contraseña obtenida</h2><div id="code" class="code">638</div><p class="sub">Resultado validado por el algoritmo científico-familiar.</p><div id="answers" class="answers"></div><button class="secondary" onclick="location.reload()">Volver a empezar</button></section>
+  <div class="footer">⚠️ Sistema totalmente fiable según fuentes familiares no verificadas.</div>
+</div>
+<script>
+const QUESTIONS=[
+"¿Cuántas personas de aquí han visto a alguno de los novios caerse de un banco?",
+"¿Cuántas personas han visto a la novia dormir en la calle?",
+"¿Cuántas personas han visto al novio con tetas en la cabeza?",
+"¿Cuántas personas tienen los pies más grandes que el novio?",
+"¿Cuántas personas son más altas que la novia?",
+"¿A cuántas personas les quedaría mal la americana del novio?"
+];
+const FINAL_CODE="638";
+let i=0; const responses=[];
+const q=document.getElementById('question'),input=document.getElementById('answer'),next=document.getElementById('next'),bar=document.getElementById('bar'),counter=document.getElementById('counter');
+function renderQuestion(){q.textContent=QUESTIONS[i];counter.textContent=`${i+1} / ${QUESTIONS.length}`;bar.style.width=`${((i+1)/QUESTIONS.length)*100}%`;input.value='';setTimeout(()=>input.focus(),100)}
+renderQuestion();
+next.addEventListener('click',()=>{if(input.value===''){input.focus();return}responses.push(input.value);i++;if(i<QUESTIONS.length)renderQuestion();else startCalculation()});
+input.addEventListener('keydown',e=>{if(e.key==='Enter')next.click()});
+function startCalculation(){document.getElementById('quiz').classList.add('hidden');document.getElementById('calc').classList.remove('hidden');const lines=[
+'Recibiendo respuestas de los novios...','Comparando datos con archivo familiar...','Aplicando corrección por alcohol ingerido...','Analizando altura, calzado y americana...','Consultando base de datos de anécdotas comprometidas...','Calculando índice de fiabilidad de memoria...','Compensando errores humanos...','Ejecutando algoritmo NASA-Cousins™...','Verificando coherencia estadística...','Generando combinación final del candado...'];
+const term=document.getElementById('terminal');term.textContent='';let n=0;const timer=setInterval(()=>{const pct=Math.min(99,Math.round(((n+1)/lines.length)*100));term.textContent+=`[${String(pct).padStart(2,'0')}%] ${lines[n]}\n`;term.scrollTop=term.scrollHeight;n++;if(n===lines.length){clearInterval(timer);setTimeout(showResult,900)}},620)}
+function showResult(){document.getElementById('calc').classList.add('hidden');document.getElementById('result').classList.remove('hidden');document.getElementById('code').textContent=FINAL_CODE;document.getElementById('answers').innerHTML=responses.map((r,idx)=>`<div class="pill">P${idx+1}<br><strong style="color:#fff;font-size:1.2rem">${r}</strong></div>`).join('')}
+</script>
+</body></html>
