@@ -11,12 +11,13 @@
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--green);font-family:Arial,Helvetica,sans-serif;font-size:15px}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.17;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%237b785e' filter='url(%23n)' opacity='.23' d='M0 0h160v160H0z'/%3E%3C/svg%3E");z-index:5}
 button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:5px}.hidden{display:none!important}
 .topline{border-bottom:1px solid var(--line);max-width:1120px;margin:auto;padding:22px 28px;display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:2px;text-transform:uppercase}.monogram{font-family:Georgia,serif;font-size:24px;letter-spacing:-2px}.topline span:last-child{color:var(--muted)}
-main{max-width:1000px;margin:auto;padding:0 24px}.hero{text-align:center;padding:43px 0 0}.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;font-weight:600}.hero h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(45px,8vw,78px);letter-spacing:-3px;line-height:1.08;margin:20px 0 16px}.hero h1 em{font-weight:400;color:#8a9471}.hero p{font-size:14px;color:var(--muted);line-height:1.8;max-width:430px;margin:auto}.landscape{width:100%;height:auto;display:block;margin:15px auto -3px;max-height:192px}.experience{position:relative;max-width:670px;margin:0 auto}.card{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:32px 42px;box-shadow:0 14px 40px #294b3908;position:relative}.card:before{content:"";position:absolute;top:6px;left:6px;right:6px;bottom:6px;border:1px solid #e9e8da;pointer-events:none;border-radius:3px}.card-top{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:10px;letter-spacing:1.6px;text-transform:uppercase}.chapter{color:var(--gold)}.progress{height:3px;background:#e9ecdf;margin:17px 0 26px;overflow:hidden}.bar{height:100%;background:#7d9464;transition:width .5s}.question-icon{width:45px;height:45px;border-radius:50%;background:#eff1e5;display:grid;place-items:center;font-size:21px;margin-bottom:16px}h2{font-family:Georgia,serif;font-size:clamp(25px,4.5vw,32px);font-weight:400;line-height:1.25;margin:0 0 12px;letter-spacing:-.6px}.hint{color:var(--muted);font-size:12px;line-height:1.6;margin:0 0 23px}.number-wrap{display:flex;align-items:center;border:1px solid #cdd4be;background:#f7f8ef;border-radius:4px;overflow:hidden}.number-wrap input{min-width:0;width:100%;border:0;background:transparent;color:var(--green);font-family:Georgia,serif;font-size:34px;padding:13px 20px;outline-offset:-5px}.number-wrap span{font-size:11px;color:var(--muted);padding-right:20px}.choices{display:grid;grid-template-columns:1fr 1fr;gap:12px}.choice{border:1px solid #cdd4be;border-radius:4px;background:#f7f8ef;color:var(--green);padding:19px 10px;font-family:Georgia,serif;font-size:22px;transition:.2s}.choice[aria-pressed=true]{background:var(--green);color:var(--paper);box-shadow:0 0 0 3px #dfe5d4}.choice:hover{border-color:var(--green)}.primary{width:100%;border:1px solid var(--green);border-radius:4px;background:var(--green);color:var(--paper);padding:17px 20px;font-size:12px;letter-spacing:.4px;display:flex;justify-content:space-between;align-items:center;margin-top:18px;transition:background .2s,transform .2s}.primary:hover{background:#3e6048;transform:translateY(-1px)}.bottom-row{display:flex;justify-content:space-between;align-items:center;margin-top:17px;color:var(--muted);font-size:10px;gap:14px}.back,.restart{background:none;border:0;color:var(--green);padding:5px 0;font-size:11px;text-decoration:underline;text-underline-offset:4px}.back:disabled{visibility:hidden}.error{color:#a04330;font-size:12px;margin:10px 0 0}.footnote{text-align:center;font-family:Georgia,serif;font-style:italic;color:#828772;font-size:13px;margin:22px 0 0}.footer{max-width:1120px;margin:35px auto 0;padding:21px 24px 26px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:10px;letter-spacing:1px}.heart{color:#ab785b}
+main{max-width:1000px;margin:auto;padding:0 24px}.hero{text-align:center;padding:43px 0 0}.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;font-weight:600}.hero h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(45px,8vw,78px);letter-spacing:-3px;line-height:1.08;margin:20px 0 16px}.hero h1 em{font-weight:400;color:#8a9471}.hero p{font-size:14px;color:var(--muted);line-height:1.8;max-width:430px;margin:auto}.hero .game-intro{max-width:520px;margin:16px auto 0;font-size:13px}.landscape{width:100%;height:auto;display:block;margin:15px auto -3px;max-height:192px}.experience{position:relative;max-width:670px;margin:0 auto}.card{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:32px 42px;box-shadow:0 14px 40px #294b3908;position:relative}.card:before{content:"";position:absolute;top:6px;left:6px;right:6px;bottom:6px;border:1px solid #e9e8da;pointer-events:none;border-radius:3px}.card-top{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:10px;letter-spacing:1.6px;text-transform:uppercase}.chapter{color:var(--gold)}.progress{height:3px;background:#e9ecdf;margin:17px 0 26px;overflow:hidden}.bar{height:100%;background:#7d9464;transition:width .5s}.question-icon{width:45px;height:45px;border-radius:50%;background:#eff1e5;display:grid;place-items:center;font-size:21px;margin-bottom:16px}h2{font-family:Georgia,serif;font-size:clamp(25px,4.5vw,32px);font-weight:400;line-height:1.25;margin:0 0 12px;letter-spacing:-.6px}.hint{color:var(--muted);font-size:12px;line-height:1.6;margin:0 0 23px}.number-wrap{display:flex;align-items:center;border:1px solid #cdd4be;background:#f7f8ef;border-radius:4px;overflow:hidden}.number-wrap input{min-width:0;width:100%;border:0;background:transparent;color:var(--green);font-family:Georgia,serif;font-size:34px;padding:13px 20px;outline-offset:-5px}.number-wrap span{font-size:11px;color:var(--muted);padding-right:20px}.choices{display:grid;grid-template-columns:1fr 1fr;gap:12px}.choice{border:1px solid #cdd4be;border-radius:4px;background:#f7f8ef;color:var(--green);padding:19px 10px;font-family:Georgia,serif;font-size:22px;transition:.2s}.choice[aria-pressed=true]{background:var(--green);color:var(--paper);box-shadow:0 0 0 3px #dfe5d4}.choice:hover{border-color:var(--green)}.primary{width:100%;border:1px solid var(--green);border-radius:4px;background:var(--green);color:var(--paper);padding:17px 20px;font-size:12px;letter-spacing:.4px;display:flex;justify-content:space-between;align-items:center;margin-top:18px;transition:background .2s,transform .2s}.primary:hover{background:#3e6048;transform:translateY(-1px)}.bottom-row{display:flex;justify-content:space-between;align-items:center;margin-top:17px;color:var(--muted);font-size:10px;gap:14px}.back,.restart{background:none;border:0;color:var(--green);padding:5px 0;font-size:11px;text-decoration:underline;text-underline-offset:4px}.back:disabled{visibility:hidden}.error{color:#a04330;font-size:12px;margin:10px 0 0}.footnote{text-align:center;font-family:Georgia,serif;font-style:italic;color:#828772;font-size:13px;margin:22px 0 0}.footer{max-width:1120px;margin:35px auto 0;padding:21px 24px 26px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:10px;letter-spacing:1px}.heart{color:#ab785b}
 .calc-card{text-align:center}.calc-card .eyebrow{color:var(--gold)}.calc-card h2{margin:18px 0 9px}.milk{width:49px;height:75px;border:2px solid var(--green);border-radius:6px 6px 14px 14px;margin:24px auto 20px;position:relative;background:#e5ebda;overflow:hidden}.milk:after{content:"";position:absolute;left:-20%;width:140%;height:120%;background:#fffdf7;bottom:var(--fill,0%);border-radius:40%;animation:wave 3s linear infinite;transition:bottom 1.5s}.milk:before{content:"L";position:absolute;z-index:1;left:0;right:0;top:28px;font-family:Georgia,serif;font-size:23px}.board{text-align:left;background:#244231;color:#f5f0dc;border-radius:4px;padding:24px;margin-top:22px;background-image:linear-gradient(#ffffff05 1px,transparent 1px),linear-gradient(90deg,#ffffff05 1px,transparent 1px);background-size:22px 22px}.board-label{font-size:9px;letter-spacing:2px;color:#c3cda9;text-transform:uppercase}.formula{font-family:Georgia,serif;font-size:clamp(21px,4.4vw,32px);line-height:1.65;margin:18px 0;min-height:90px;overflow-wrap:anywhere}.formula small{display:block;font-family:Arial,sans-serif;font-size:11px;color:#cbd5bc;line-height:1.6}.calc-log{font-family:monospace;font-size:10px;color:#ccdabf;line-height:1.8;min-height:55px;white-space:pre-line}.calc-progress{display:flex;justify-content:space-between;font-size:10px;margin-top:18px}.result{text-align:center}.seal{border:1px solid #b9c4a6;border-radius:50%;height:70px;width:70px;margin:0 auto 22px;display:grid;place-items:center;font-size:32px;background:#f0f2e5}.code{display:flex;justify-content:center;gap:12px;margin:26px 0}.code span{background:#eff1e4;border:1px solid #cdd4bd;border-radius:6px;font-family:Georgia,serif;font-size:64px;line-height:1;padding:17px 21px;box-shadow:inset 0 -4px 0 #e2e7d5}.result p{color:var(--muted);font-size:13px;line-height:1.7}.result details{text-align:left;border-top:1px solid var(--line);margin-top:25px;padding-top:18px;font-size:12px}.result summary{cursor:pointer}.answer-list{padding-left:20px;color:var(--muted);line-height:1.6}.answer-list li{padding:7px 0}.answer-list strong{color:var(--green)}.restart{margin-top:22px}.fade{animation:appear .4s ease both}
 @keyframes wave{to{transform:rotate(360deg)}}@keyframes appear{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}@media(max-width:600px){.topline{padding:17px 20px;font-size:8px;letter-spacing:1.3px}.topline .middle{display:none}main{padding:0 16px}.hero{padding-top:32px}.hero h1{letter-spacing:-2px;margin-top:16px}.hero p{font-size:12px;max-width:295px}.eyebrow{font-size:9px;letter-spacing:2px}.landscape{width:calc(100% + 24px);max-width:none;margin-left:-12px;min-height:115px}.card{padding:25px 23px}.card-top{font-size:9px;letter-spacing:1px}.footer{margin-top:25px;font-size:8px;letter-spacing:.6px}.footnote{font-size:12px}.formula{min-height:110px}.board{padding:20px 16px}.code span{font-size:54px;padding:16px 18px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
 .thinking-photo{margin:0 0 20px;padding:8px;background:var(--white);border:1px solid var(--line);border-radius:6px;box-shadow:0 10px 25px #294b3909}.thinking-photo img{display:block;width:100%;height:auto;border-radius:3px}.thinking-photo figcaption{text-align:center;font-family:Georgia,serif;font-style:italic;font-size:12px;color:var(--muted);padding:12px 4px 5px}
 .cheer-scores{display:flex;justify-content:space-between;gap:16px;margin:8px 0 12px}.cheer-team{display:flex;flex-direction:column;gap:6px;font-family:Georgia,serif;font-size:24px;color:#b53144}.cheer-team:last-child{text-align:right;color:#2467a1}.cheer-team output{font-size:42px;font-variant-numeric:tabular-nums}.cheer-slider{display:block;width:100%;height:48px;margin:0;appearance:none;-webkit-appearance:none;background:transparent;cursor:ew-resize;--split:50%}.cheer-slider::-webkit-slider-runnable-track{height:14px;border-radius:20px;background:linear-gradient(to right,#bf4655 0%,#bf4655 var(--split),#367db4 var(--split),#367db4 100%)}.cheer-slider::-moz-range-track{height:14px;border-radius:20px;background:linear-gradient(to right,#bf4655 0%,#bf4655 var(--split),#367db4 var(--split),#367db4 100%)}.cheer-slider::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:38px;height:38px;border-radius:50%;background:var(--white);border:3px solid var(--green);margin-top:-12px;box-shadow:0 3px 8px #294b3926}.cheer-slider::-moz-range-thumb{width:32px;height:32px;border-radius:50%;background:var(--white);border:3px solid var(--green);box-shadow:0 3px 8px #294b3926}.cheer-directions{display:flex;justify-content:space-between;color:var(--muted);font-size:10px}.cheer-message{text-align:center;background:#f0f2e5;border:1px dashed #c3ccae;border-radius:5px;padding:17px 12px;margin:20px 0 10px;font-family:Georgia,serif;font-size:18px;line-height:1.4;min-height:86px;display:grid;place-items:center}.cheer-reset{display:block;margin:0 auto;background:transparent;border:0;padding:10px;color:var(--muted);font-size:11px;text-decoration:underline;text-underline-offset:3px}
-.photo-preview,.camera-preview{display:block;width:100%;max-height:380px;object-fit:contain;background:#e9ecdf;border-radius:5px;margin:18px 0}.camera-preview{transform:scaleX(-1)}.photo-confirm{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.6;margin:18px 0}.photo-confirm input{width:20px;height:20px;flex-shrink:0;accent-color:var(--green)}.primary:disabled{opacity:.45;cursor:not-allowed;transform:none}.photo-status{font-size:12px;line-height:1.6;color:var(--muted);margin:16px 0}.photo-fallback{display:block;font-size:12px;color:var(--muted);margin:20px 0}.photo-fallback input{display:block;width:100%;margin-top:10px}.photo-save{text-decoration:none}.photo-back{margin-top:14px}
+.photo-preview,.camera-preview{display:block;width:100%;max-height:380px;object-fit:contain;background:#e9ecdf;border-radius:5px;margin:18px 0}.camera-preview{transform:scaleX(-1)}.photo-confirm{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.6;margin:18px 0}.photo-confirm input{width:20px;height:20px;flex-shrink:0;accent-color:var(--green)}.primary:disabled{opacity:.45;cursor:not-allowed;transform:none}.photo-status{font-size:12px;line-height:1.6;color:var(--muted);margin:16px 0}.photo-fallback{display:block;font-size:12px;color:var(--muted);margin:20px 0}.photo-fallback input{display:block;width:100%;margin-top:10px}.photo-save{text-decoration:none}.photo-back{margin-top:14px}.photo-code{margin-top:18px}.photo-code label{display:block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}.photo-code input{width:100%;border:1px solid #cdd4be;background:#f7f8ef;border-radius:4px;color:var(--green);font-family:Georgia,serif;font-size:25px;padding:11px 15px}
+.welcome{text-align:center;padding:46px 42px}.welcome h2{font-size:clamp(30px,5vw,43px);margin:16px auto;max-width:540px}.welcome p{max-width:510px;margin:0 auto;color:var(--muted);line-height:1.8}.welcome-terms{display:flex;align-items:flex-start;gap:10px;text-align:left;max-width:510px;margin:26px auto 0;padding:15px;background:#f0f2e5;border:1px dashed #c3ccae;border-radius:5px;font-size:13px;line-height:1.55}.welcome-terms input{width:20px;height:20px;flex-shrink:0;accent-color:var(--green)}.welcome .primary{max-width:510px;margin:18px auto 0}.welcome .primary span:last-child{font-size:19px}
 </style>
 </head>
 <body>
@@ -54,8 +55,9 @@ main{max-width:1000px;margin:auto;padding:0 24px}.hero{text-align:center;padding
 </svg>
 </section>
 <div class="experience">
-<figure id="thinking-photo" class="thinking-photo"><img id="question-photo" src="doncos_vilafiz.png" width="1672" height="941" alt="Doncos y Vilafiz animando a la boda sobre un mapa ilustrado de Galicia" fetchpriority="high"><figcaption id="photo-caption">Dos pueblos, una boda y muuucho que celebrar.</figcaption></figure>
-<section id="quiz" class="card">
+<section id="welcome" class="card welcome" aria-labelledby="welcome-title"><div class="eyebrow">Antes de empezar</div><div class="seal" aria-hidden="true">🍷</div><h2 id="welcome-title">El reglamento<br>del buen jaleo</h2><p>Coged un vinito (o lo que tengáis a mano), haced todas las pruebas vosotros dos y contadlo en voz bien alta para que se entere toda la boda. Sed minuciosos: cada detalle puede acercaros al código final… o dar pie a una buena risa.</p><label class="welcome-terms"><input id="accept-terms" type="checkbox">Aceptamos jugar con una copa en la mano, darlo todo y seguir las pistas con la seriedad justita.</label><button id="start-game" class="primary" type="button" disabled><span>¡Aceptamos el reglamento!</span><span aria-hidden="true">→</span></button></section>
+<figure id="thinking-photo" class="thinking-photo hidden"><img id="question-photo" src="doncos_vilafiz.png" width="1672" height="941" alt="Doncos y Vilafiz animando a la boda sobre un mapa ilustrado de Galicia" fetchpriority="high"><figcaption id="photo-caption">Dos pueblos, una boda y muuucho que celebrar.</figcaption></figure>
+<section id="quiz" class="card hidden">
 <div class="card-top"><span class="chapter" id="chapter">01 / Que se oiga el rebaño</span><span id="counter">Pregunta 1 de 10</span></div>
 <div class="progress" role="progressbar" aria-label="Progreso del cuestionario" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="quiz-progress"><div id="bar" class="bar"></div></div>
 <form id="question-form" novalidate>
@@ -68,18 +70,18 @@ main{max-width:1000px;margin:auto;padding:0 24px}.hero{text-align:center;padding
 <p id="cheer-message" class="cheer-message" role="status">¡Empate técnico! Se acepta soborno en queso.</p>
 <button id="cheer-reset" class="cheer-reset" type="button">Paz entre pueblos: volver al 50 / 50</button>
 </div>
-<div id="number-wrap" class="number-wrap"><input id="answer" type="number" inputmode="numeric" min="0" max="1000000" step="1" placeholder="0" aria-labelledby="question" aria-describedby="hint error"><span>personas</span></div>
-<div id="choices" class="choices hidden" role="group" aria-labelledby="question"><button type="button" class="choice" data-value="Andrea" aria-pressed="false">Andrea</button><button type="button" class="choice" data-value="Carlos" aria-pressed="false">Carlos</button></div></div>
+<div id="number-wrap" class="number-wrap"><input id="answer" type="number" inputmode="numeric" min="0" max="1000000" step="1" placeholder="0" aria-labelledby="question" aria-describedby="hint error"><span id="answer-unit">primos</span></div>
+<div id="choices" class="choices hidden" role="group" aria-labelledby="question"></div></div>
 <p id="error" class="error" role="alert"></p>
 <button id="next" class="primary" type="submit"><span id="next-label">Guardar y seguir</span><span aria-hidden="true">→</span></button>
 <div class="bottom-row"><button id="back" type="button" class="back">← Anterior</button><span id="question-footer">Aquí nadie pierde. ¡Solo se pierde la voz!</span></div>
 </form>
 </section>
 <section id="photo-task" class="card hidden" aria-labelledby="photo-title">
-<div class="card-top"><span class="chapter">04 / Prueba de amor familiar</span><span id="photo-counter">Foto 1 de 2</span></div>
+<div class="card-top"><span class="chapter" id="photo-chapter">04 / Prueba de amor familiar</span><span id="photo-counter">Prueba 1 de 5</span></div>
 <div class="question-icon" aria-hidden="true" style="margin-top:24px">📸</div>
 <h2 id="photo-title" tabindex="-1">Andrea, ¡foto con tu suegra!</h2>
-<p class="hint">Acercaos, sonreíd y decid… ¡quesooo! El comité de vacas exige pruebas de este buen rollo.</p>
+<p class="hint" id="photo-hint">Acercaos, sonreíd y decid… ¡quesooo! El comité de vacas exige pruebas de este buen rollo.</p>
 <video id="camera-preview" class="camera-preview hidden" autoplay playsinline muted aria-label="Vista previa de la cámara"></video>
 <img id="photo-preview" class="photo-preview hidden" alt="Vuestra foto con la suegra">
 <button id="open-camera" type="button" class="primary">Abrir cámara</button>
@@ -88,8 +90,9 @@ main{max-width:1000px;margin:auto;padding:0 24px}.hero{text-align:center;padding
 <button id="save-photo" type="button" class="primary hidden">Descargar foto en este dispositivo ↓</button>
 <p id="photo-status" class="photo-status" role="status">Las fotos se quedan en vuestro dispositivo. No se suben a internet.</p>
 <label id="photo-confirm-wrap" class="photo-confirm hidden"><input id="photo-confirm" type="checkbox">He comprobado que la foto está guardada en el dispositivo.</label>
+<div id="photo-code-wrap" class="photo-code hidden"><label id="photo-code-label" for="photo-code">Código de la prueba</label><input id="photo-code" type="number" inputmode="numeric" min="0" step="1" placeholder="0"></div>
 <button id="photo-next" type="button" class="primary" disabled>Seguir con la foto de Carlos →</button>
-<button id="photo-back" type="button" class="back photo-back hidden">← Volver a la foto de Andrea</button>
+<button id="photo-back" type="button" class="back photo-back hidden">← Volver a la prueba anterior</button>
 </section>
 <section id="calc" class="card calc-card hidden" aria-labelledby="calc-title">
 <div class="eyebrow">Laboratorio de amor & ganadería</div><div class="milk" id="milk" aria-hidden="true"></div>
@@ -111,13 +114,14 @@ main{max-width:1000px;margin:auto;padding:0 24px}.hero{text-align:center;padding
 <script>
 'use strict';
 const QUESTIONS=[
+{text:"Continúa la frase: hay homes, homiños, macacos e…",icon:"🐒",type:"choice",options:["Macaquiños","Macacotes","Macarrones","Macabrones","Macapuchinos"],correct:"Macaquiños"},
 {text:"Doncos o Vilafiz… ¿quién se viene arriba?",icon:"📣",type:"slider"},
-{text:"¿Cuántas personas de aquí han visto a alguno de los novios caerse de un banco?",icon:"🌾"},
-{text:"¿Cuántas personas han visto a la novia dormir en la calle?",icon:"🌙"},
-{text:"¿Cuántas personas han visto al novio con tetas en la cabeza?",icon:"🐄"},
-{text:"¿Cuántas personas tienen los pies más grandes que el novio?",icon:"👢"},
-{text:"¿Cuántas personas son más altas que la novia?",icon:"🌻"},
-{text:"¿A cuántas personas les quedaría mal la americana del novio?",icon:"🌿"},
+{text:"¿Cuántos primos (políticos también) han visto a alguno de los novios caerse de un banco?",icon:"🌾"},
+{text:"¿Cuántos primos (políticos también) han visto a la novia dormir en la calle?",icon:"🌙"},
+{text:"¿Cuántos primos (políticos también) han visto al novio con tetas en la cabeza?",icon:"🐄"},
+{text:"¿Cuántos primos (políticos también) tienen los pies más grandes que el novio?",icon:"👢"},
+{text:"¿Cuántos primos (políticos también) son más altos que la novia?",icon:"🌻"},
+{text:"¿A cuántos primos (políticos también) les quedaría mal la americana del novio?",icon:"🌿"},
 {text:"¿Quién dio el primer paso para que empezara vuestra historia?",icon:"❤️",type:"choice"},
 {text:"¿Quién es más probable que llegue tarde a una cita?",icon:"⏰",type:"choice"},
 {text:"¿Quién tiene más posibilidades de quedarse dormido viendo una película?",icon:"😴",type:"choice"}
@@ -132,7 +136,7 @@ function renderQuestion(focus=false){
  $("counter").textContent="Pregunta "+(index+1)+" de "+QUESTIONS.length;
  $("chapter").textContent=slider?"01 / Que se oiga el rebaño":choice?"03 / Vuestra historia":"02 / Anécdotas del rebaño";
  $("bar").style.width=(index/QUESTIONS.length*100)+"%";$("quiz-progress").setAttribute("aria-valuenow",index);
- $("hint").textContent=slider?"¡Haced gritar a los dos pueblos! Moved el deslizador según os dé el oído… o el cariño. Podéis dejarlo donde queráis: aquí no hay ganadores, hay boda.":choice?"Decidid juntos quién se lleva este mérito.":"Haced vuestra mejor estimación. Cada anécdota cuenta.";
+ $("hint").textContent=slider?"¡Haced gritar a los dos pueblos! Moved el deslizador según os dé el oído… o el cariño. Podéis dejarlo donde queráis: aquí no hay ganadores, hay boda.":choice?"Decidid juntos quién se lleva este mérito.":"Contad solo a los primos, políticos incluidos. Haced vuestra mejor estimación.";
  $("number-wrap").classList.toggle("hidden",choice||slider);$("answer").disabled=choice||slider;
  $("cheer").classList.toggle("hidden",!slider);$("cheer-slider").disabled=!slider;
  if(slider){$("cheer-slider").value=responses[index]??50;updateCheer();}
@@ -142,7 +146,8 @@ function renderQuestion(focus=false){
  $("question-footer").textContent=slider?"Aquí nadie pierde. ¡Solo se pierde la voz!":"Sin ayuda. Ni siquiera de los primos.";
  $("choices").classList.toggle("hidden",!choice);$("answer").value=choice?"":(responses[index]??"");
  selected=choice?(responses[index]??null):null;
- document.querySelectorAll(".choice").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.value===selected)));
+ $("choices").replaceChildren();
+ if(choice)(item.options??["Andrea","Carlos"]).forEach(value=>{const button=document.createElement("button");button.type="button";button.className="choice";button.dataset.value=value;button.setAttribute("aria-pressed",String(value===selected));button.textContent=value;$("choices").append(button);});
  $("back").disabled=index===0;$("error").textContent="";
  $("next-label").textContent=slider?"¡Así suena nuestra boda! Seguimos":index===QUESTIONS.length-1?"Ahora… ¡foto con las suegras!":"Guardar y seguir";
  $("question-content").classList.remove("fade");void $("question-content").offsetWidth;$("question-content").classList.add("fade");
@@ -165,37 +170,47 @@ function updateCheer(){
 }
 $("cheer-slider").addEventListener("input",updateCheer);
 $("cheer-reset").addEventListener("click",()=>{$("cheer-slider").value=50;updateCheer();});
-document.querySelectorAll(".choice").forEach(button=>button.addEventListener("click",()=>{
+$("choices").addEventListener("click",event=>{
+ const button=event.target.closest(".choice");if(!button)return;
  selected=button.dataset.value;$("error").textContent="";
- document.querySelectorAll(".choice").forEach(option=>option.setAttribute("aria-pressed",String(option===button)));
-}));
+ $("choices").querySelectorAll(".choice").forEach(option=>option.setAttribute("aria-pressed",String(option===button)));
+});
 $("question-form").addEventListener("submit",event=>{
  event.preventDefault();const choice=QUESTIONS[index].type==="choice",slider=QUESTIONS[index].type==="slider";const raw=slider?$("cheer-slider").value:$("answer").value;const value=choice?selected:Number(raw);
  if(choice?!selected:(raw.trim()===""||!Number.isSafeInteger(value)||value<0||value>(slider?100:1000000))){
-  $("error").textContent=choice?"Elegid a Andrea o a Carlos para continuar.":"Introducid un número entero entre 0 y 1.000.000.";return;
+  $("error").textContent=choice?"Elegid una respuesta para continuar.":"Introducid un número entero entre 0 y 1.000.000.";return;
  }
+ if(choice&&QUESTIONS[index].correct&&value!==QUESTIONS[index].correct){$("error").textContent="¡Casi! Pensad un poquito más en los macacos…";return;}
  responses[index]=value;
  if(index<QUESTIONS.length-1){index++;renderQuestion(true);}else startPhotos();
 });
 $("back").addEventListener("click",()=>{if(index>0){index--;renderQuestion(true);}});
 function buildCalculations(){
- const nums=responses.slice(1,7),sum=nums.reduce((a,b)=>a+b,0),mean=sum/6;
- const a=responses.slice(7).filter(value=>value==="Andrea").length,c=3-a;
+ const sliderAnswer=responses[QUESTIONS.findIndex(item=>item.type==="slider")];
+ const nums=responses.filter((answer,i)=>!QUESTIONS[i].type),sum=nums.reduce((a,b)=>a+b,0),mean=sum/6;
+ const storyAnswers=responses.slice(-3),a=storyAnswers.filter(value=>value==="Andrea").length,c=3-a;
  const fmt=value=>new Intl.NumberFormat("es-ES",{maximumFractionDigits:2}).format(value);
  return [
- {title:"Calibrando el aplausómetro rural",formula:(100-responses[0])+" % Doncos + "+responses[0]+" % Vilafiz = 100 % festa",note:"Resultado oficial: dos pueblos, cero perdedores y una boda que se oye desde el prado.",log:"✓ Gargantas calentadas\n✓ Rivalidad disuelta en buena leche"},
+ {title:"Calibrando el aplausómetro rural",formula:(100-sliderAnswer)+" % Doncos + "+sliderAnswer+" % Vilafiz = 100 % festa",note:"Resultado oficial: dos pueblos, cero perdedores y una boda que se oye desde el prado.",log:"✓ Gargantas calentadas\n✓ Rivalidad disuelta en buena leche"},
  {title:"Reuniendo vuestras anécdotas",formula:"S = "+nums.join(" + ")+" = "+fmt(sum),note:"Seis respuestas. Un rebaño entero de recuerdos.",log:"✓ Respuestas recogidas\n✓ Primos excluidos del comité científico"},
  {title:"Calculando la media del rebaño",formula:"μ = "+fmt(sum)+" / 6 = "+fmt(mean),note:"Promedio oficial de anécdotas por pregunta.",log:"✓ Datos pasados por el colador\n→ Ajustando el coeficiente de cachondeo"},
  {title:"Integrando la producción de leche",formula:"∫₀¹ ("+fmt(sum)+"t + 1) dt = "+fmt(sum/2+1)+" L",note:"Modelo lechero: vuestras respuestas alimentan la integral.",log:"✓ Integral definida resuelta\n→ Pasteurizando los resultados"},
- {title:"Midiendo quién lleva la iniciativa",formula:"A = "+a+" · C = "+c+" → A + C = 3",note:"Primer paso: "+responses[7]+". Impuntualidad: "+responses[8]+". Siesta de cine: "+responses[9]+".",log:"✓ Tres méritos repartidos\n→ Consultando al consejo de vacas"},
+ {title:"Midiendo quién lleva la iniciativa",formula:"A = "+a+" · C = "+c+" → A + C = 3",note:"Primer paso: "+storyAnswers[0]+". Impuntualidad: "+storyAnswers[1]+". Siesta de cine: "+storyAnswers[2]+".",log:"✓ Tres méritos repartidos\n→ Consultando al consejo de vacas"},
  {title:"Derivando la química de la pareja",formula:"d/dt [("+a+" + "+c+")t²] = 6t",note:"La complicidad crece. La derivada lo confirma.",log:"✓ Compatibilidad con el pasto: excelente\n→ Eliminando grumos de la ecuación"},
  {title:"Resolviendo la integral del amor",formula:"∫₀¹ 6t dt = 3  ♡",note:"Tres nuevas respuestas y una historia en común.",log:"✓ Integral amorosa completada\n→ Dejando reposar la mezcla"},
  {title:"Aplicando el teorema de la buena leche",formula:"lim (amor + paciencia) = ∞",note:"Cuando los años tienden a infinito. Demostración: vosotros.",log:"✓ Leche de primera calidad\n✓ Bendición del rebaño recibida"},
  {title:"Preparando la combinación",formula:"Recuerdos + amor + muuucha suerte",note:"Última comprobación del candado…",log:"✓ Cálculos sellados con un beso\n✓ Todo listo para la gran apertura"}
  ];
 }
+const PHOTO_TASKS=[
+ {chapter:"04 / Prueba de amor familiar",title:"Andrea, ¡foto con tu suegra!",hint:"Acercaos, sonreíd y brindad con un vinito (o lo que estéis bebiendo). El comité de vacas exige pruebas de este buen rollo.",next:"Seguir con la foto de Carlos →"},
+ {chapter:"04 / Prueba de amor familiar",title:"Carlos, ¡foto con tu suegra!",hint:"Acercaos, sonreíd y brindad con un vinito (o lo que estéis bebiendo). El comité de vacas exige pruebas de este buen rollo.",next:"Seguir con la prueba de las pinzas →"},
+ {chapter:"05 / Misión entre invitados",title:"El buscador de pinzas",hint:"Buscad pinzas entre los invitados y haced una foto con todas las que consigáis reunir. ¡A dar vueltas y echar unas risas!",codeLabel:"Código: número de pinzas encontradas",next:"Seguir con el consejo de los veteranos →"},
+ {chapter:"06 / Consejo para Carlos",title:"Carlos y los tres matrimonios veteranos",hint:"Consigue que tres novios o esposos veteranos te firmen en una servilleta un consejo para durar muchísimo. Después, foto con los tres haciendo la pose del «sabio» o abrazados.",codeLabel:"Código: años totales que suman los 3 matrimonios",next:"Seguir con el cazador de corbatas →"},
+ {chapter:"07 / Misión de estilo",title:"El cazador de corbatas",hint:"Haz una foto de grupo con 5 invitados que lleven corbata o pajarita del mismo color, o con el estampado más extravagante de la boda.",codeLabel:"Código: número de corbatas de ese color exacto en la foto",next:"¡Pruebas listas! Calcular combinación →"}
+];
 let photoIndex=0,cameraStream=null,cameraRequest=0;
-const photos=[null,null];
+const photos=PHOTO_TASKS.map(()=>null);
 function stopCamera(){
  cameraRequest++;
  if(cameraStream)cameraStream.getTracks().forEach(track=>track.stop());
@@ -204,15 +219,17 @@ function stopCamera(){
  $("open-camera").disabled=false;
 }
 function renderPhoto(){
- stopCamera();const photo=photos[photoIndex],name=photoIndex===0?"Andrea":"Carlos";
- $("photo-title").textContent=name+", ¡foto con tu suegra!";$("photo-counter").textContent="Foto "+(photoIndex+1)+" de 2";
+ stopCamera();const photo=photos[photoIndex],task=PHOTO_TASKS[photoIndex],hasCode=Boolean(task.codeLabel);
+ $("photo-chapter").textContent=task.chapter;$("photo-title").textContent=task.title;$("photo-hint").textContent=task.hint;$("photo-counter").textContent="Prueba "+(photoIndex+1)+" de "+PHOTO_TASKS.length;
  $("photo-preview").classList.toggle("hidden",!photo);
  if(photo)$("photo-preview").src=photo.url;else $("photo-preview").removeAttribute("src");
  $("save-photo").classList.toggle("hidden",!photo);
  $("photo-confirm-wrap").classList.toggle("hidden",!photo?.downloaded);
  $("photo-confirm").checked=photo?.confirmed??false;
- $("photo-next").disabled=!photo?.confirmed;
- $("photo-next").textContent=photoIndex===0?"Seguir con la foto de Carlos →":"¡Fotos listas! Calcular combinación →";
+ $("photo-code-wrap").classList.toggle("hidden",!hasCode);
+ $("photo-code-label").textContent=task.codeLabel??"";$("photo-code").value=photo?.code??"";
+ $("photo-next").disabled=!photo?.confirmed||(hasCode&&!Number.isSafeInteger(photo?.code));
+ $("photo-next").textContent=task.next;
  $("photo-back").classList.toggle("hidden",photoIndex===0);
  $("open-camera").textContent=photo?"Repetir foto":"Abrir cámara";
  $("photo-status").textContent=photo?.downloaded?"Descarga solicitada. Comprobad el archivo en Descargas o Archivos antes de seguir.":"Las fotos se quedan en vuestro dispositivo. No se suben a internet.";
@@ -225,7 +242,7 @@ function startPhotos(){
 function setPhoto(blob,extension){
  const previous=photos[photoIndex];
  if(previous)URL.revokeObjectURL(previous.url);
- photos[photoIndex]={url:URL.createObjectURL(blob),extension,downloaded:false,confirmed:false};
+ photos[photoIndex]={url:URL.createObjectURL(blob),extension,downloaded:false,confirmed:false,code:previous?.code};
  renderPhoto();
 }
 $("open-camera").addEventListener("click",async()=>{
@@ -257,22 +274,31 @@ $("take-photo").addEventListener("click",()=>{
 });
 $("save-photo").addEventListener("click",()=>{
  const photo=photos[photoIndex];if(!photo)return;
- const link=document.createElement("a"),name=photoIndex===0?"Andrea":"Carlos";
- link.href=photo.url;link.download="Boda-"+name+"-con-su-suegra-"+new Date().toISOString().replace(/[:.]/g,"-")+"."+photo.extension;
+ const link=document.createElement("a"),name="prueba-"+(photoIndex+1);
+ link.href=photo.url;link.download="Boda-"+name+"-"+new Date().toISOString().replace(/[:.]/g,"-")+"."+photo.extension;
  document.body.append(link);link.click();link.remove();
  photo.downloaded=true;$("photo-confirm-wrap").classList.remove("hidden");
  $("photo-status").textContent="Descarga solicitada. Si aparece un aviso, aceptad Guardar. Buscad la foto en Descargas o Archivos; si se abre una vista previa, usad Compartir → Guardar imagen o Guardar en Archivos.";
 });
 $("photo-confirm").addEventListener("change",()=>{
  const photo=photos[photoIndex];if(!photo?.downloaded)return;
- photo.confirmed=$("photo-confirm").checked;$("photo-next").disabled=!photo.confirmed;
+ photo.confirmed=$("photo-confirm").checked;
+ const needsCode=Boolean(PHOTO_TASKS[photoIndex].codeLabel);
+ $("photo-next").disabled=!photo.confirmed||(needsCode&&!Number.isSafeInteger(photo.code));
+});
+$("photo-code").addEventListener("input",()=>{
+ const photo=photos[photoIndex];if(!photo)return;
+ const raw=$("photo-code").value,code=Number(raw);
+ photo.code=raw!==""&&Number.isSafeInteger(code)&&code>=0?code:undefined;
+ $("photo-next").disabled=!photo.confirmed||!Number.isSafeInteger(photo.code);
 });
 $("photo-next").addEventListener("click",()=>{
- if(!photos[photoIndex]?.confirmed)return;
- if(photoIndex===0){photoIndex=1;renderPhoto();$("photo-title").focus();}
+ const photo=photos[photoIndex],needsCode=Boolean(PHOTO_TASKS[photoIndex].codeLabel);
+ if(!photo?.confirmed||(needsCode&&!Number.isSafeInteger(photo.code)))return;
+ if(photoIndex<PHOTO_TASKS.length-1){photoIndex++;renderPhoto();$("photo-title").focus();}
  else if(photos.every(photo=>photo?.confirmed)){stopCamera();$("photo-task").classList.add("hidden");startCalculation();}
 });
-$("photo-back").addEventListener("click",()=>{photoIndex=0;renderPhoto();$("photo-title").focus();});
+$("photo-back").addEventListener("click",()=>{if(photoIndex>0){photoIndex--;renderPhoto();$("photo-title").focus();}});
 window.addEventListener("pagehide",stopCamera);
 function startCalculation(){
  $("quiz").classList.add("hidden");$("calc").classList.remove("hidden");$("calc-title").focus({preventScroll:true});
@@ -295,6 +321,11 @@ function showResult(){
  $("result-title").focus({preventScroll:true});
 }
 $("restart").addEventListener("click",()=>{clearTimeout(calculationTimer);stopCamera();photos.forEach(photo=>{if(photo)URL.revokeObjectURL(photo.url);});photos.fill(null);photoIndex=0;index=0;selected=null;responses.length=0;$("result").classList.add("hidden");$("thinking-photo").classList.remove("hidden");$("quiz").classList.remove("hidden");renderQuestion(true);});
+$("accept-terms").addEventListener("change",()=>{$("start-game").disabled=!$("accept-terms").checked;});
+$("start-game").addEventListener("click",()=>{
+ if(!$("accept-terms").checked)return;
+ $("welcome").classList.add("hidden");$("thinking-photo").classList.remove("hidden");$("quiz").classList.remove("hidden");renderQuestion(true);
+});
 renderQuestion();
 </script>
 </body>
